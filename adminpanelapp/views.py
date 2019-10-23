@@ -219,6 +219,8 @@ class Users(TemplateView):
 
 
 
+
+
 class GeneralConfiguration(TemplateView):
 	template_name = '9051-GENERAL-CONFIG.html'
 	def get(self, request, *args, **kwargs):

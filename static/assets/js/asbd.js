@@ -166,3 +166,19 @@ $('.selectall').click(function() {
     	});
         });
     });
+
+   
+// Create url on add page
+$(document).ready(function() {
+	$("#page_title").on('keyup',function(){
+		var title=$(this).val();
+		var url=title.replace(/ /g,"-");
+		$("#page_url").val(url);
+	})
+	// Create  page url on edit page
+	$("#edit_page_title").on('keyup',function(){
+		var title=$(this).val();
+		var url=title.replace(/ /g,"-");
+		$("#edit_page_url").val(url);
+	})
+	});

@@ -10,37 +10,42 @@
     	<div class="manage_admin">
 	    	<div class="s_paypal_struct">
           <div class="d-flex justify-content-between">
+            <form  action="{% url 'add_blog_category' %}" method="post">
+              {% csrf_token %}
 	      		<h4>Add Blog Category</h4>
             <!-- <button type="button" class="btn btn-success">Add</button> -->
           </div>
 	      		<div class="mb-2 blog_list_table">
 	      			<div class="row">
                   <div class="col-md-6">
-                    <form action="">
+                   
                       <div class="mt-2">
                         <label for=""><span style="color: #ff0000">*</span>Status</label>
-                        <select name="" id="" class="form-control">
-                          <option value="" selected>Select</option>        
+                         <select class="form-control" name="status" required>
+                          <option value="" selected disabled>Select Status</option>
+                          <option value="active">Active</option>
+                          <option value="deactive">Deactive</option>    
                         </select>
                       </div>
                        <div class="mt-2 mb-3">
                         <label for=""><span style="color: #ff0000">*</span>Sort Order</label>
-                        <input type="text" class="form-control">
+                        <input type="number" min="1"  class="form-control" name="order">
                       </div>
-                    </form>
+                    
                   </div>
                   <div class="col-md-6">
                     <div class="mt-2 mb-3">
                         <label for=""><span style="color: #ff0000">*</span>Category</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control"   placeholder="category name" name="category" required>
                       </div>
                   </div> 
-                  <button type="button" class="btn btn-success mr-3 ml-3">
+                  <button type="submit" class="btn btn-success mr-3 ml-3">
                   <i class="fa fa-check" aria-hidden="true"></i> Save
                 </button>
-                <button type="button" class="btn btn-warning">
+                <button type="button" class="delete btn btn-warning">
                   <i class="fa fa-ban" aria-hidden="true"></i> Cancel
-                </button>   
+                </button>  
+                </form> 
               </div>
 	      		</div>
 	    	</div>
@@ -50,3 +55,11 @@
   </div>
  
  {% endblock %}
+
+ {% block extrascript %}
+<script type="text/javascript">
+  $('.delete').on('click', function() {
+    window.history.back();
+  });
+</script>
+{% endblock %}

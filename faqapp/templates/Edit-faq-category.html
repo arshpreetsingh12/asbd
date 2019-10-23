@@ -5,12 +5,12 @@
 
   <div class="content-wrapper">
 
-    <form action="add_faq_category" method="post">
+    <form action="{% url 'faq_category_edit' cat.id %}" method="post">
       {% csrf_token %}
     <section class="content container-fluid">
       <div class="manage_admin">
          <div class="add_min d-flex justify-content-between"> 
-    <h3>Faq Category Add</h3>
+    <h3>Faq Category Edit</h3>
     </div>
      <!--  {% if messages %}
     {% for message in messages %}
@@ -24,15 +24,15 @@
                   <div class="form-group">
                     <label>*Status</label>
                     <select class="form-control" name="status" required>
-                    <option value="" selected disabled>Select Status</option>
-                      <option value="active">Active</option>
-                      <option value="deactive">Deactive</option>
+                      <option value="active"  {% if cat.status %} selected {% endif %}>Active</option>
+                    <option value="deactive"  selected>Deactive</option>
+                    </select>
                     </select>
                   </div>
                  
                   <div class="form-group">
                     <label>*Short Order</label>
-                     <input type="number" min="1" class="form-control" name="order" required>
+                     <input type="number" min="1" class="form-control" value="{{cat.sort_order}}" name="order" required>
                   </div>
                 </div>
                   
@@ -40,17 +40,15 @@
        
       <div class="form-group">
                     <label>*Category</label>
-                    <input type="text" class="form-control"  name="category" required="" placeholder="category name">
+                    <input type="text" class="form-control" value="{{cat.category_name}}"  name="category" required="" placeholder="category name">
                   </div>
-          
-                
-      
+       
     </div>
 
   </div>
   
        
-        <button type="submit" class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button> 
+        <button type="submit" class="edit  btn btn-success" ><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button> 
         <button class="delete btn btn-orange"><span><i class="fa fa-ban" aria-hidden="true"></i></span> Cancel</button>
      
       </div>

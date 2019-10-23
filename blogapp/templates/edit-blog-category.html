@@ -1,0 +1,65 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  
+  <div class="content-wrapper">
+  
+    <section class="content container-fluid">
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+          <div class="d-flex justify-content-between">
+            <form  method="post">
+              {% csrf_token %}
+	      		<h4>Edit Blog Category</h4>
+            <!-- <button type="button" class="btn btn-success">Add</button> -->
+          </div>
+	      		<div class="mb-2 blog_list_table">
+	      			<div class="row">
+                  <div class="col-md-6">
+                   
+                      <div class="mt-2">
+                        <label for=""><span style="color: #ff0000">*</span>Status</label>
+                        <select name="status" id="" class="form-control">
+                          <option value="" selected disabled>Select Status</option>   
+                          <option value="active" {% if cat.status %} selected {% endif %}>Active</option>  
+                          <option value="deactive">Deactive</option>       
+                        </select>
+                      </div>
+                       <div class="mt-2 mb-3">
+                        <label for=""><span style="color: #ff0000">*</span>Sort Order</label>
+                        <input type="number" min="1"  value="{{cat.sort_order}}"  class="form-control" name="order">
+                      </div>
+                    
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mt-2 mb-3">
+                        <label for=""><span style="color: #ff0000">*</span>Category</label>
+                        <input type="text" class="form-control" value="{{cat.category_name}}"  placeholder="category name" name="category" required>
+                      </div>
+                  </div> 
+                  <button type="submit" class="edit  btn btn-success mr-3 ml-3">
+                  <i class="fa fa-check" aria-hidden="true"></i> Save
+                </button>
+                <button type="button" class="delete btn btn-warning">
+                  <i class="fa fa-ban" aria-hidden="true"></i> Cancel
+                </button>  
+                </form> 
+              </div>
+	      		</div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+ 
+ {% endblock %}
+
+ {% block extrascript %}
+<script type="text/javascript">
+  $('.delete').on('click', function() {
+    window.history.back();
+  });
+</script>
+{% endblock %}

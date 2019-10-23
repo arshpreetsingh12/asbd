@@ -11,7 +11,7 @@
   <thead>
     <div class="d-flex justify-content-between"> 
     <h3>Blog Categories</h3>
-    <button class="btn btn-success">Add</button>
+    <a href="{% url 'add_blog_category' %}"><button class="btn btn-success">Add</button></a>
     </div>
     <tr>
       <th scope="col">Sr.No</th>
@@ -23,50 +23,20 @@
     </tr>
   </thead>
   <tbody>
+    {% for cat in blog_cats %}
     <tr>
-      <td>1</td>
-      <td>CAT 1</td>
-      <td>1</td>
-      <td>Active</td>
-      <td>2019-10-07 07:43:20</td>
+      <td>{{forloop.counter}}</td>
+      <td>{{cat.category_name}}</td>
+      <td>{{cat.sort_order}}</td>
+       <td>{% if cat.status %} Active {% else %} Deactive {% endif %}</td>
+      <td>{{cat.created_on}}</td>
       <td>
-        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
-        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+        <a href="{% url  'edit_blog_category' cat.id %}">
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> </a>
+        <button class="delete btn btn-danger"  data-id= {{cat.id}}><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
       </td>
     </tr>
-     <tr>
-      <td>2</td>
-      <td>CAT 2</td>
-      <td>2</td>
-      <td>Active</td>
-      <td>2019-10-07 07:43:20</td>
-      <td>
-        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
-        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
-      </td>
-    </tr>
-     <tr>
-      <td>3</td>
-      <td>CAT 3</td>
-      <td>3</td>
-      <td>Active</td>
-      <td>2019-10-07 07:43:20</td>
-      <td>
-        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
-        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
-      </td>
-    </tr>
-     <tr>
-      <td>4</td>
-      <td>CAT 4</td>
-      <td>4</td>
-      <td>Active</td>
-      <td>2019-10-07 07:43:20</td>
-      <td>
-        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
-        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
-      </td>
-    </tr>
+    {% endfor %}
   </tbody>
 </table>
       </div>
@@ -75,3 +45,26 @@
   </div>
   
   {% endblock %}
+
+  {% block extrascript %}
+
+      <script type="text/javascript">
+        $('.delete').on('click',function() {
+          var row = $(this);
+          var value = row.data('id');
+          $.ajax({
+            url: '{{ request.path }}',
+            type: 'post',
+            data:{
+              'csrfmiddlewaretoken': '{{csrf_token}}',
+              'cat_id':value
+            },
+            success: function(response) {
+              row.parent().parent().remove();
+            }
+          });
+           return false;
+        });
+        
+      </script>
+{% endblock %}

@@ -11,14 +11,14 @@
     <div class="manage_admin">
       <div class="form-group">
           <label>Title</label>
-          <input type="text" class="form-control" value="{{page.title}}" name="edit_title" placeholder="Terms" required="">
+          <input type="text" class="form-control" value="{{page.title}}" name="edit_title" placeholder="Terms" id="edit_page_title" required="">
       </div>
              <div class="">
                <textarea name="edit_content" id="editor1_2" rows="10"  cols="80">{{page.content}}</textarea>
              </div>
 <div class="form-group d-flex my-3 align-items-center">
           <label style="white-space: nowrap;">url fundgraphers.com/</label>
-          <input type="text" class="form-control ml-4" name="edit_url" value="{{page.url}}" placeholder="Terms" required="">
+          <input type="text" class="form-control ml-4" name="edit_url" id="edit_page_url" value="{{page.url}}" placeholder="Terms" required="">
       </div>
 
       <div class="my-3">
@@ -33,3 +33,8 @@
     <!-- /.content -->
   </div>
  {% endblock %}
+{% block extrascript %}
+<script>
+   CKEDITOR.replace( 'edit_content' );
+</script>
+{% endblock %}

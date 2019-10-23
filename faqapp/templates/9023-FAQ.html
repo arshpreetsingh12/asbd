@@ -4,26 +4,13 @@
 <div class="wrapper">
 
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <!-- <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section> -->
-
-    <!-- Main content -->
     <section class="content container-fluid">
     	<!-- paypal content -->
     	<div class="manage_admin">
 	    	<div class="s_paypal_struct">
           <div class="d-flex justify-content-between">
 	      		<h4>Faqs Listing</h4>
-            <button type="button" class="btn btn-success">Add</button>
+            <a href="{% url 'add_faq' %}"><button type="button" class="btn btn-success">Add</button></a>
           </div>
 	      		<div class="mb-2 blog_list_table">
 	      			<div class="mt-3 table-responsive">
@@ -41,72 +28,26 @@
                     </tr>
                   </thead>
                   <tbody>
+                    {% for faq in faqs %}
                     <tr>
-                      <th scope="row">1</th>
-                      <td>cat 1 Q1</td>
-                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<sapn class="sap_img"
-                    ><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></sapn> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
-                      <td>CAT 1</td>
-                      <td>1</td>
-                      <td>active</td>
-                      <td>2017-09-19 06:45:22</td>
+                      <th scope="row">{{forloop.counter}}</th>
+                      <td>{{faq.question}}</td>
+
+                      <td>{% autoescape off %}
+                            {{faq.answer}}
+                           {% endautoescape %}</td>
+                           
+                      <td>{{faq.category.category_name}}</td>
+                      <td>{{faq.sort_order}}</td>
+                      <td>{% if faq.status %} Active {% else %} Deactive {% endif %}</td>
+                      <td>{{faq.created_on}}</td>
                       <td>
-                        <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                      <a href="{% url 'edit_faq' faq.id %}">  <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button> </a>
+                        <button type="button" class="delete btn btn-danger" data-id="{{faq.id}}"><i class="fa fa-trash-o" aria-hidden="true" ></i> Delete</button>
                       </td>
                     </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>cat 1 Q2</td>
-                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
-                      <td>CAT 1</td>
-                      <td>2</td>
-                      <td>active</td>
-                      <td>2017-09-19 06:45:22</td>
-                      <td>
-                        <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>cat 1 Q3</td>
-                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
-                      <td>CAT 1</td>
-                      <td>3</td>
-                      <td>active</td>
-                      <td>2017-09-19 06:45:22</td>
-                      <td>
-                        <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>cat 1 FAQ 1</td>
-                      <td>xxx</td>
-                      <td>CAT 1</td>
-                      <td>4</td>
-                      <td>active</td>
-                      <td>2017-09-19 06:45:22</td>
-                      <td>
-                        <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                      </td>
-                    </tr>
-                     <tr>
-                      <th scope="row">5</th>
-                      <td>cat 2 Q 1</td>
-                      <td>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
-                      <td>CAT 1</td>
-                      <td>8</td>
-                      <td>active</td>
-                      <td>2017-09-19 06:45:22</td>
-                      <td>
-                        <button type="button" class="btn btn-primary mb-2 mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                      </td>
-                    </tr>
+                    {% endfor %}
+                   
                   </tbody>
                 </table>    
               </div>
@@ -117,3 +58,26 @@
     <!-- /.content -->
   </div>
  {% endblock %}
+
+      {% block extrascript %}
+
+      <script type="text/javascript">
+        $('.delete').on('click',function() {
+          var row = $(this);
+          var value = row.data('id');
+          $.ajax({
+            url: '{{ request.path }}',
+            type: 'post',
+            data:{
+              'csrfmiddlewaretoken': '{{csrf_token}}',
+              'faq_id':value
+            },
+            success: function(response) {
+              row.parent().parent().remove();
+            }
+          });
+           return false;
+        });
+        
+      </script>
+{% endblock %}

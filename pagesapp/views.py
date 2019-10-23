@@ -111,3 +111,14 @@ class SelectedPageStatus(View):
 			raise e
 			response['status']=False
 		return HttpResponse(json.dumps(response), content_type="application/json")
+
+
+class GetPages(View):
+	template_name='dynamic_page.html'
+	def get(self, request, *args, **kwargs):
+		try:
+			url=kwargs.get('page')
+			page_html=Page.objects.get(url=url)
+		except Exception as e:
+			raise e
+		return render(request,self.template_name,locals())

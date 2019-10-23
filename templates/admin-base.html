@@ -72,12 +72,12 @@ desired effect
 <script src="{% static 'bower_components/ckeditor/ckeditor.js' %}"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
- <script>
+<!--  <script>
    CKEDITOR.replace( 'editor1_2' );
-</script>
- <script>
+</script> -->
+ <!-- <script>
       CKEDITOR.replace( 'editor1' );
-   </script>
+   </script> -->
 <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
 <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 <!-- AdminLTE App -->
@@ -85,6 +85,14 @@ desired effect
 <script type="text/javascript" src="{% static 'assets/js/asbd.js' %}"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
+ 
+
      user experience. -->
+     
+{% block extrascript %}
+{% endblock %}
+<script type="text/javascript">
+  var token="{{csrf_token}}";
+</script>
 </body>
 </html>

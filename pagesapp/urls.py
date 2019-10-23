@@ -9,5 +9,4 @@ urlpatterns = [
 	path('single_page_status/<page_id>', login_required(PageStatus.as_view()), name="single_page_status"),
 	path('change_multiple', login_required(SelectedPageStatus.as_view()), name="change_multiple"),
 
-
 ]

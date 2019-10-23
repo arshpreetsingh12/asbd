@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from pagesapp.views import GetPages
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,7 @@ urlpatterns = [
     path('imagesapp/',include('imagesapp.urls')),
     path('couponapp/',include('couponapp.urls')),
     path('pagesapp/',include('pagesapp.urls')),
+    path('<page>',GetPages.as_view()),
 
     path('oauth/', include('social_django.urls', namespace='social')),
 ]
