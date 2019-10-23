@@ -1,0 +1,173 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+
+    <section class="content container-fluid">
+      <div class="manage_admin">
+        <div class="add_min page_9033 d-flex justify-content-between align-items-center"> 
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">New Image</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link">/</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Used Backdrops</a>
+  </li>
+</ul>
+    <button class="btn btn-success">Add</button>
+    </div>
+
+
+<div class="tab-content" id="pills-tabContent">
+   <!-- New Images Table -->
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <table class="table">
+  <thead>
+    
+    <tr>
+      <th scope="col">Image Title</th>
+      <th scope="col">Type of use</th>
+      <th scope="col">Keywords</th>
+      <th scope="col">Image</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EV1300.jpg</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>EV1300.jpg</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>EV1300.jpg</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>EV1300.jpg</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+ <!-- Used Backdrops Table -->
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+     <table class="table">
+  <thead>
+    
+    <tr>
+      <th scope="col">Invoice</th>
+      <th scope="col">Date</th>
+      <th scope="col">Image Name</th>
+      <th scope="col">Size</th>
+      <th scope="col">Price</th>
+      <th scope="col">Condition</th>
+      <th scope="col">Type of use</th>
+      <th scope="col">Keywords</th>
+      <th scope="col">Image</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASIN707712365</td>
+      <td style="white-space: nowrap;">2019-12-03</td>
+      <td style="white-space: nowrap;">USED-EV1300.jpg</td>
+      <td style="white-space: nowrap;">1.5m X 2m / 59" x 78" (~5ft x 7ft)</td>
+      <td>$400.00</td>
+      <td>Appear as new</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td class="d-flex">
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger ml-2"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+   <tr>
+      <td>ASIN707712365</td>
+      <td style="white-space: nowrap;">2019-12-03</td>
+      <td style="white-space: nowrap;">USED-EV1300.jpg</td>
+      <td style="white-space: nowrap;">1.5m X 2m / 59" x 78" (~5ft x 7ft)</td>
+      <td>$400.00</td>
+      <td>Appear as new</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td class="d-flex">
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger ml-2"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+      <tr>
+      <td>ASIN707712365</td>
+      <td style="white-space: nowrap;">2019-12-03</td>
+      <td style="white-space: nowrap;">USED-EV1300.jpg</td>
+      <td style="white-space: nowrap;">1.5m X 2m / 59" x 78" (~5ft x 7ft)</td>
+      <td>$400.00</td>
+      <td>Appear as new</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td class="d-flex">
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger ml-2"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>ASIN707712365</td>
+      <td style="white-space: nowrap;">2019-12-03</td>
+      <td style="white-space: nowrap;">USED-EV1300.jpg</td>
+      <td style="white-space: nowrap;">1.5m X 2m / 59" x 78" (~5ft x 7ft)</td>
+      <td>$400.00</td>
+      <td>Appear as new</td>
+      <td>Dance, Party, Proms</td>
+      <td>Arches, Balcony, Chandelier, Columns, Mountains, Railings, String lights, Vase, Waterfalls</td>
+      <td class="img_9093"><img src="{% static 'dist/img/photo1.png' %}" alt="add-logo"></td>
+      <td class="d-flex">
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger ml-2"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  
+  {% endblock %}

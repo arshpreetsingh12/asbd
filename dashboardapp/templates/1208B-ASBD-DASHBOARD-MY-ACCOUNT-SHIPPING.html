@@ -1,0 +1,124 @@
+{% extends 'dashboard-base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+	<section class="all-page-mg">
+		<div class="container">
+			<div class="my-frofile-form">
+				<h1 class="my-account-heading">MY ACCOUNT / SHIPPING<span class="add_address" data-toggle="modal" data-target="#add_addrss"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add a new address</span></h1>
+
+						<form>
+							
+							<div class="Shipping_dash my-5">
+								<div class="form-check dh_ship">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="optradio">
+										<span class="ship_hd">INNA ZAGORODNIA</span><span class="ml-3">12478 Peace Ave, King WA, 98157</span>
+										<span class="mx-3 edit_btn"><a href="">Edit</a></span><span class="ml-4">Default</span>
+									</label>
+								</div>
+
+								<div class="form-check dh_ship">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="optradio">
+										<span class="ship_hd">AYAZ Madhiya</span><span class="ml-3">12478 Candy Lane Ave, Richmond, NJ, 98154</span>
+										<span class="mx-3 edit_btn"><a href="">Edit</a></span>
+									</label>
+								</div>
+							
+							</div>
+							
+							
+							<div class="form-second-section">
+								
+									<div class="text-left send_btn">
+										 <!-- file source -->
+											<!-- <div class="check_ship mb-3">
+										        <label class="checkbox-label">
+										            <input type="checkbox">
+										            <span class="checkbox-custom rectangular"></span>
+										            <span class="input-title">I agree with<span class="d-domain">Domain.com</span>terms</span>
+										        </label>
+										        
+										     </div> -->
+										<button class="d-btn_sdc">Set A Default</button>
+										<button class="d-btn_sdc">Delete</button>
+										<button class="d-btn_sdc mr-4">Cancel</button>
+									</div>
+								
+							</div>
+						</form>
+					</div>
+			
+	</section>
+	<!-- Modal -->
+<!-- Modal -->
+<div id="add_addrss" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      	<h6 class="modal-title text-left">New Address</h6>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <form>
+        	 <div class="form-group">
+			    <label for="exampleInputEmail1">First Name:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Last Name:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Address line 1:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Address line 2:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Country/Region:</label>
+			    <select id="" name="" class="form-control">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                </select>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">City:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">ZIP:</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Phone number</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+			  </div>
+			  
+</form>
+      </div>
+      <div class="text-center mb-4">
+      	<button type="button" class="btn">SUBMIT</button>
+        <button type="button" class="btn" data-dismiss="modal">CANCEL</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- modal end -->
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+	</div>
+{% endblock %}

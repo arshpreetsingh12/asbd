@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<!-- Section Start-->
+	<section class="invitation all-page-mg">
+		<div class="container invitation-wth">
+		<div class="invitation-content">
+								<div class="d-flex justify-content-between upload_links mt-3 mb-0 mx-3">
+									<a href="#">Upload Background Image</a>
+									<a href="#">Free Images</a>
+									<a href="#">Download Invitation</a>
+								</div>
+								<div class="container-fluid invit-cont">
+									<div class=" background-img">
+									<div class="row mt-3 mb-3">
+										<div class="col-md-12">
+											<div class="border py-4  px-3">
+												<div class="invited_area">
+													<h1 class="text-center">
+														<img src="{% static 'assets/images/thankyou-invited.png' %}" class="img-fluid" alt="thankyou-invited">
+													</h1>
+													<div class="text-center mb-3 mt-3">
+														<div class="d-flex justify-content-center">
+															<i class="fas fa-star mr-3" aria-hidden="true"></i>
+															<i class="fas fa-star mr-3" aria-hidden="true"></i>
+															<i class="fas fa-star mr-3" aria-hidden="true"></i>
+															<i class="fas fa-star mr-3" aria-hidden="true"></i>
+															<i class="fas fa-star" aria-hidden="true"></i>
+														</div>
+													</div>
+													<div>
+														<!-- <label for="">Name</label> -->
+														<input type="text" class="form-control mb-3" placeholder="John Doe">
+													</div>
+													<div>
+														<label for="">Message</label>
+														<textarea name="" id="" rows="22" clo="35" class="form-control mb-3" placeholder="Tips: What your friend and relatives need to know.\n\nA) Write your mission objectives\n\nB) Notify Invitees submission deadline***\n\nC) First come first serve submission.\n\nD) Promise to keep the mission a secret for maximum surprise!\n\n\n\n\n\n\n\n\n\n\n***Mission must be accomplished within 60 days from invitation download date.
+														"></textarea>
+													</div>
+													<div class="greeting_text text-center">
+														<h6 class="greeting-domain">WWW.DOMAINNAME.COM</h6>
+														<h6 class="greeting-domain my-3">WISHDROPS SECRET MISSION CODE</h6>
+														<h2 class="greeting-code my-2">123456789</h2>
+														<p class="greeting-text my-2">Use the mission code to enter your personal greeting for someone special</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+	</section>
+<!-- Footer Start-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+	{% endblock %}
+	

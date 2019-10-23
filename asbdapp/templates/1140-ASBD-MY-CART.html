@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<!-- Section Start-->
+	<section class="my_cart all-page-mg">
+		<div class="container-fluid">
+			<div class="product_table_list table-responsive">
+			<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Customization</th>
+      <th scope="col">Remove</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>
+	      <div class="product-image">
+	      <img src="{% static 'assets/images/4.jpg' %}">
+	      <p class="img_name">image name.jpg</p>
+    	  </div>
+	  </td>
+      <td>
+      	<div class="product-details">
+      <!-- <div class="product-title">Dingo Dog Bones</div> -->
+      
+      <select class="ca md-form form-control" searchable="Search here..">
+		  <option value="" disabled="" selected="">1.5m x 2m / 59" (~5ft x 7ft)</option>
+		  <option value="1">2m x 1.5m / 78" x 59" (~7ft x 5ft)</option>
+		  <option value="2">3m x 3m / 118" x 118" (~10ft x 10ft)</option>
+		  <option value="3">6m x 3m / 236" x 118" (~20ft x 10ft)</option>
+		  <option value="4">12m x 6m / 472" x 236" (~40ft x 20ft)</option>
+		  <option value="5">1.83m x 0.91m / 6ft x 3ft (up to 36 greetings)</option>
+		  <option value="6">2.44m x 1.22m / 8ft x 4ft (up to 64 greetings)</option>
+		  <option value="7">3.05m x 1.52m / 10ft x 5ft (up to 100 greetings)</option>
+		  <option value="8">6.10m x 3.05m / 20ft x 10ft (up to 400 greetings)</option>
+		  <option value="9">12.19m x 6.10m / 40ft x 20ft (up to 1600 greetings)</option>
+		</select>
+	  
+    </div>
+      </td>
+      <td>
+      	<div class="product-quantity text-center">
+      <input class="text-center" type="number" value="2" min="1">
+    </div>
+      </td>
+      <td>
+      	<div class="customization"><button class="single_btn">Image Editor</button></div>
+      </td>
+      <td>
+      	<div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+      </td>
+      <td>
+      	<div class="product-price">12.99</div>
+      </td>
+      <td>
+      	<div class="product-line-price">25.98</div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      
+      <td>
+	      <div class="product-image">
+	      <img src="{% static 'assets/images/5.jpg' %}">
+	      <p class="img_name">image name.jpg</p>
+    	  </div>
+	  </td>
+      <td>
+      	<div class="product-details">
+      <!-- <div class="product-title">Dingo Dog Bones</div> -->
+      
+      	<select class="ca md-form form-control" searchable="Search here..">
+		  <option value="" disabled="" selected="">1.5m x 2m / 59" (~5ft x 7ft)</option>
+		  <option value="1">2m x 1.5m / 78" x 59" (~7ft x 5ft)</option>
+		  <option value="2">3m x 3m / 118" x 118" (~10ft x 10ft)</option>
+		  <option value="3">6m x 3m / 236" x 118" (~20ft x 10ft)</option>
+		  <option value="4">12m x 6m / 472" x 236" (~40ft x 20ft)</option>
+		  <option value="5">1.83m x 0.91m / 6ft x 3ft (up to 36 greetings)</option>
+		  <option value="6">2.44m x 1.22m / 8ft x 4ft (up to 64 greetings)</option>
+		  <option value="7">3.05m x 1.52m / 10ft x 5ft (up to 100 greetings)</option>
+		  <option value="8">6.10m x 3.05m / 20ft x 10ft (up to 400 greetings)</option>
+		  <option value="9">12.19m x 6.10m / 40ft x 20ft (up to 1600 greetings)</option>
+		</select>
+	  
+    </div>
+      </td>
+      <td>
+      	<div class="product-quantity text-center">
+      <input class="text-center" type="number" value="2" min="1">
+    </div>
+      </td>
+      <td>
+      	<div class="customization"><button class="single_btn">Image Editor</button></div>
+      </td>
+      <td>
+      	<div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+      </td>
+      <td>
+      	<div class="product-price">12.99</div>
+      </td>
+      <td>
+      	<div class="product-line-price">25.98</div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<th>Total</th>
+    	<th>$330.00</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="text-center my-5">
+	      <button class="checkout btn_sn">Save</button>
+	       <button class="checkout btn_sn">Next</button>
+  	 </div>
+		</div>
+	</section>
+
+
+
+	<!-- cart item slider -->
+	<div class="container">
+	<div class="owl-carousel owl-theme" id="crosel_dash">
+    <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+
+    <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+    <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+    <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+    <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+   <div class="item">
+    	<div class=" cart-itm">
+    	<h4>The Fox Is A Red Fox</h4>
+		<p>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+		<img src="{% static 'assets/images/4.jpg' %}">
+		<p class="text-dark">Robinson Appleson Smith Maccan</p>
+		</div>
+		<div class="text-center">Delete</div>
+    </div>
+ 
+</div>
+<div class="">
+  <ul class="review-greetings d-flex">
+    <li class="">
+      <a class="next-img mr-2"><img src="{% static 'assets/images/previous.png' %}"></a>
+    </li>
+    <li class="">1</li>
+    <li class="">/</li>
+    <li class="">40</li>
+    <li class="">
+      <a class="next-img ml-2"><img src="{% static 'assets/images/next.png' %}"></a>
+    </li>
+  </ul>
+</div>
+</div>
+  <div class="scroll_page">
+    <a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	{% endblock %}

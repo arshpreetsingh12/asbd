@@ -1,0 +1,111 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- <section class="content-header">
+      <h1>
+        Page Header
+        <small>Optional description</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section> -->
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <h1 class="text-center mb-3">Configuration Site</h1>
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+	      		<div class="mb-2">
+	      			<div class="row">
+	      				<div class="col-md-8">
+			      			<form action="">
+			      				<div class="mt-2">
+				      				<label for="">Name Site</label>
+				      				<input type="text" class="form-control" placeholder="Fundgraphers">
+			      				</div>
+			      				<div class="mt-3">
+				      				<label for="">Url</label>
+				      				<input type="text" class="form-control" placeholder="fundgraphers.com">
+			      				</div>
+			      				<div class="mt-2">
+				      				<label for="">Description</label>
+				      				<textarea name="" id="" rows="10" class="w-100" placeholder=" Here de description of the site"></textarea>
+                      <div class="text-right"><span>350 Chars Maximum</span></div>
+			      				</div>
+                    <div class="mt-2">
+                      <label for="">Tags</label>
+                      <textarea name="" id="" rows="4" class="w-100" placeholder=" Photo, Videographers,"></textarea>
+                      <div class="text-right"><span>15 Tags Maximum</span></div>
+                    </div>
+                     <div class="mt-2">
+                      <label for="">URL youtube video promo home</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                      <label for="">Facebook URL</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="mt-2  mb-3">
+                      <label for="">Twitter URL</label>
+                      <input type="text" class="form-control">
+                    </div>
+                     <div class="mt-2  mb-3">
+                      <label for="">Google URL</label>
+                      <input type="text" class="form-control">
+                    </div>
+                     <div class="mt-2  mb-3">
+                      <div class="form-group d-flex justify-content-between">
+                        <div id="upload_button" class=" align-self-center">
+                          <div class="d-flex">
+                            <div>
+                          <label>
+                            <input type="file" ngf-select="" ng-model="new_files" multiple="">
+                          </label>
+                          <p class="up-text mb-2">Logo 2250x523 .png</p>
+                        </div>
+                          <div class=""><button>Update Logo</button></div>
+                        </div>
+                        </div>
+
+                        <div class="add-img"><img src="{% static 'dist/img/add-logo.png' %}" alt="add-logo"></div>
+                      </div>
+                    </div>
+                    <div class="mt-2  mb-3">
+                      <label for="">Maintenance Mode</label>
+                      <select name="" id="" class="form-control w-25">
+                        <option value="" selected>No</option>
+                        <option value="">Yes</option>          
+                      </select>
+                    </div>
+			      				<!-- <div class="mt-2">
+				      				<label for=""><span>*</span>Body Photo</label>
+                      <div class="form-group d-flex justify-content-between">
+                        <div id="upload_button" class=" align-self-center">
+                          <label>
+                            <input type="file" ngf-select="" ng-model="new_files" multiple="">
+                          </label>
+                          <p class="up-text mb-2">Format jpeg 400x400 px</p>
+                        </div>
+                        <div class="add-img"><img src="./dist/img/add-logo.png" alt="add-logo"></div>
+                      </div>
+			      				</div> -->
+			      			</form>
+                <button type="button" class="btn btn-primary mr-3">
+                   Save
+                </button>
+	      				</div>
+	      			</div>
+	      		</div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+ 
+ {% endblock %}

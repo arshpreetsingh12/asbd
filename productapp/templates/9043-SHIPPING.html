@@ -1,0 +1,340 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- <section class="content-header">
+      <h1>
+        Page Header
+        <small>Optional description</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section> -->
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <div class="manage_admin">
+        <div class="add_min d-flex justify-content-between"> 
+          <div class="d-flex">
+    <h3>Shipping Listing</h3>
+    <div class="d-flex ml-5">
+    <h6 class=" new_as">Local</h6>
+    <h6 class="ml-4">International</h6>
+     </div>
+   </div>
+    <button class="btn btn-success">Add</button>
+    </div>
+        <table class="table">
+  <thead>
+    
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Delivery Type</th>
+      <th scope="col">Shipping Name</th>
+      <th scope="col">Weight From</th>
+      <th scope="col">Weight To</th>
+       <th scope="col">Shipping Fee </th>
+      <th scope="col">Shipping Time </th>
+       <th scope="col">Enable </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+    <!-- /.content -->
+
+
+    <section class="content container-fluid">
+      <div class="manage_admin">
+        <div class="add_min d-flex justify-content-between"> 
+          <div class="d-flex">
+    <h3>Shipping Listing</h3>
+    <div class="d-flex ml-5">
+    <h6 class=" ">Local</h6>
+    <h6 class="ml-4 new_as">International</h6>
+     </div>
+   </div>
+    <button class="btn btn-success">Add</button>
+    </div>
+        <table class="table">
+  <thead>
+    
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Delivery Type</th>
+      <th scope="col">Shipping Name</th>
+      <th scope="col">Weight From</th>
+      <th scope="col">Weight To</th>
+       <th scope="col">Shipping Fee </th>
+      <th scope="col">Shipping Time </th>
+       <th scope="col">Enable </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Express</td>
+      <td>Express-5 Days</td>
+      <td>1.01</td>
+      <td>2.00</td>
+      <td>30.00</td>
+      <td>5</td>
+       <td class="text-center"><input class="check_b" type="checkbox"></td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+  </div>
+ 
+ {% endblock %}

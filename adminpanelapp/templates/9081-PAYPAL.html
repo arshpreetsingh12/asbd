@@ -1,0 +1,92 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+  
+    <section class="content container-fluid">
+      	<h1 class="text-center mb-3">PayPal</h1>
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+	      		<h4>Select Paypal mode</h4>
+	      		<label for="">
+	      			<input type="radio">
+	      			Live
+	      		</label>
+	      		<label for="">
+	      			<input type="radio">
+	      			Sandbox
+	      		</label>
+	      		<div class="live mt-3 mb-3 d-flex">
+	      			<div>
+	      				<button type="button" class="btn btn-default">Live</button>
+	      			</div>
+	      			<div class="sanbox_input">
+	      				<button type="button" class="btn btn-default btn-block">Sandbox</button>
+	      			</div>
+	      		</div>
+	      		<div class="mb-2">
+	      			<h4 class="mb-3">Paypal Details for payment below $12</h4>
+	      			<div class="row">
+	      				<div class="col-md-8">
+			      			<form action="">
+			      				<div>
+				      				<label for="">Paypal Email</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Username</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Password</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Signature</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">App Id</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      			</form>
+	      				</div>
+	      			</div>
+	      		</div>
+	      		<div class="mb-2">
+	      			<h4 class="mb-3">Paypal Details for payment below $12</h4>
+	      			<div class="row">
+	      				<div class="col-md-8">
+			      			<form action="">
+			      				<div>
+				      				<label for="">Paypal Email</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Username</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Password</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">Signature</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      				<div>
+				      				<label for="">App Id</label>
+				      				<input type="text" class="form-control">
+			      				</div>
+			      			</form>
+	      				</div>
+	      			</div>
+	      		</div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+ {% endblock %}

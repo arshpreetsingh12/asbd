@@ -1,0 +1,77 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+
+  <div class="content-wrapper">
+   
+    <section class="content container-fluid">
+      <div class="manage_admin">
+        <table class="table">
+  <thead>
+    <div class="d-flex justify-content-between"> 
+    <h3>Blog Categories</h3>
+    <button class="btn btn-success">Add</button>
+    </div>
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Category</th>
+      <th scope="col">Sort Order</th>
+      <th scope="col">Status</th>
+      <th scope="col">Created On</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>CAT 1</td>
+      <td>1</td>
+      <td>Active</td>
+      <td>2019-10-07 07:43:20</td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+     <tr>
+      <td>2</td>
+      <td>CAT 2</td>
+      <td>2</td>
+      <td>Active</td>
+      <td>2019-10-07 07:43:20</td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+     <tr>
+      <td>3</td>
+      <td>CAT 3</td>
+      <td>3</td>
+      <td>Active</td>
+      <td>2019-10-07 07:43:20</td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+     <tr>
+      <td>4</td>
+      <td>CAT 4</td>
+      <td>4</td>
+      <td>Active</td>
+      <td>2019-10-07 07:43:20</td>
+      <td>
+        <button class="edit  btn btn-primary"><sapn><i class="fa fa-pencil" aria-hidden="true"></i></sapn> Edit</button> 
+        <button class="delete btn btn-danger"><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  
+  {% endblock %}

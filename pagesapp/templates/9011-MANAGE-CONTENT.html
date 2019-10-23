@@ -1,0 +1,87 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+ 
+    <section class="content container-fluid">
+      <h1 class="text-center">Manage Pages <span> 
+      <a href="{% url 'add_page' %}"><button class="btn btn-primary">Add Page</button></span></h1>
+    <!-- dashboard content -->
+    <div class="manage_admin">
+      <div class="add_min d-flex justify-content-between"> 
+    <h3>Manage Pages</h3>
+    <ul class="mg_top_ic">
+      <li><a href="{% url 'manage_page' %}"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
+
+      <li class='all-page-status' data-id="false"><a href="javascript:void(0)"><i class="fa fa-lock lock" id="multiple"  aria-hidden="true"></i></a></li>
+      
+      <li class='all-page-status' data-id="true"><a href="javascript:void(0)"><i class="fa fa-unlock lock" id="multiple_change"   aria-hidden="true"></i></a></li>
+    </ul>
+    </div>
+     
+    <div class="posting_table">
+   <table id="example" class="table table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th><label class="payment_gateway_checkbox"><input  class="selectall"  type="checkbox">
+                <span class="checkmark"></span>
+              </label></th>
+                <th>Page Title</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+          {% for page in pages %}
+        
+               <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox" name="checked_groups" value="{{page.id}}" >
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id" >{{page.title}}</td>
+            
+                <td class="list_icon text-center"  ><a  href="{% url 'single_page_status' page.id %}"  data-id="{{page.id}}"><i  class="fa fa-{% if page.status == True %}unlock{% else %}lock{% endif %}" aria-hidden="true"></i></a></td>
+                
+                <td class="list_icon d-flex">
+                  <a href="/admin/{{page.url}}" target="_blank">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="{% url 'edit_page' page.id %}" target="_blank">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                  <a href="{% url 'delete_page' page.id %}" class="delete-page" data-id="{{page.id}}">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+           
+           {% endfor %}
+           
+        </tbody>
+       <!--  <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> -->
+    </table>
+              </div>
+              
+
+    </div>
+      
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% endblock %}

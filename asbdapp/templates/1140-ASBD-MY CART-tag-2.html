@@ -1,0 +1,71 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<div class=" page_cart-mg"></div>
+	<div class="text-center py-2 pay_text">
+		<p>Paypal provides excellent and professional Buyer and Seller protection.<br>
+			To take advantage of the secured services, one reseller check out at a time is allowed.
+		 </p>
+	</div>
+	<section class="asbd-new">
+		<div class="container">
+			<div class="paypal-text">
+
+			</div>
+			<div class="used-backdrop-table">
+				<div class="table-responsive-sm">	
+					<div class="table-responsive backdrop-table">
+						<table class="table ">
+							<thead>
+								<tr>
+									<th scope="col">Image</th>
+									<th scope="col">Image Filename</th>
+									<th scope="col">Product</th>
+									<th scope="col">Condition</th>
+									<th colspan="2" scope="col">Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="prdct-img"><img src="{% static 'assets/images/4.jpg' %}" class="img-fluid" alt="product"></td>
+									<td>USED-ST15748</td>
+									<td>1.5m x 2m/59"x78" (~5thx7th)</td>
+									<td>Appears as new</td>
+									<td class="price-check">$125.00 <label><input type='checkbox'><span></span></label></td>
+								</tr>
+								<tr>
+									<td class="prdct-img"><img src="{% static 'assets/images/4.jpg' %}" class="img-fluid" alt="product"></td>
+									<td>USED-ST15748</td>
+									<td>1.5m x 2m/59"x78" (~5thx7th)</td>
+									<td>Appears as new</td>
+									<td class="price-check">$125.00 <label><input type='checkbox'><span></span></label></td>
+								</tr>
+								<tr>
+									<td class="prdct-img"><img src="{% static 'assets/images/4.jpg' %}" class="img-fluid" alt="product"></td>
+									<td>USED-ST15748</td>
+									<td>1.5m x 2m/59"x78" (~5thx7th)</td>
+									<td>Appears as new</td>
+									<td class="price-check">$125.00 <label><input type='checkbox'><span></span></label></td>
+						
+								</tr>
+								<tr>
+									<td class="text-right" colspan="5"><p class="mr-5 font-weight-bold">TOTAL (Excluding Shipping):<span class="mx-3">$275.00</span></p></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="text-center my-5">
+	      <button class="checkout btn_nc">Next</button>
+	       <button class="checkout btn_nc">Cancel</button>
+  	 </div>
+			</div>
+		</div>
+	</section>
+<!-- Footer Start-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+
+{% endblock %}

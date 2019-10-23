@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style type="text/css">// best seen at 1500px or less
+
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    bottom: 0;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    bottom: -26px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+</style>
+
+	<section class="term_page">
+	<div class="container">
+		
+	</div>
+</section>
+<section class="about_content">
+	<div class="container">
+		<div class="about_data">
+		<div class="term_head">
+			<h2>Terms</h2>
+		</div>
+		<div class="about_text">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+		</div>
+	</div>
+	</div>
+</section>
+<!-- animation wave -->
+	<section class="about_page">
+<div class="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+</section>
+
+	
+
+	
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+	
+	{% endblock %}

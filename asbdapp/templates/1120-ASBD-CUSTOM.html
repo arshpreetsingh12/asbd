@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<!-- Section Start-->
+	<!-- gallery section -->
+	<div class="container-fluid">
+		<div class="upload_content mt-5 pt-5 px-3">
+			<div class="d-flex align-items-center">
+				<div class="mr-5">
+					<button type="button" class="single_btn">Upload</button>
+				</div>
+				<div>
+					<label class="payment_gateway_checkbox"><input type="checkbox"> Upload images must be copyright infrigement free and non-pronographic in nature.
+						<span class="checkmark1"></span>
+					</label>
+				</div>
+			</div>
+			<div class="note_para">
+				<p>(Note: Upload image width and height must be least 3000px (Jpeg format / 30MB max). Cropping tool is available to crop the image fit the ordered backdrops size.)</p>
+			</div>
+			<div class="my-3">
+				<button type="button" class="single_btn">License Free Images</button>
+			</div>
+		</div>
+	</div>
+<section class="gallery-section all-page-mg1">
+	<div class="container-fluid">	
+		<!-- <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link home_btn active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link home_btn" id="pills-new-tab" data-toggle="pill" href="#pills-new" role="tab" aria-controls="pills-new" aria-selected="false">Square</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link home_btn" id="pills-used-tab" data-toggle="pill" href="#pills-used" role="tab" aria-controls="pills-used" aria-selected="false">Rectangle</a>
+			</li>
+			
+		</ul> -->
+		
+		<div class="tab-content" id="pills-tabContent">
+			<!-- All tab images -->
+			<div class="tab-pane home_gallery_gap fade show active text-center" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h8.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h7.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h4.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h9.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+
+			</div>
+			<!-- New tab images -->
+			<div class="tab-pane fade home_gallery_gap text-center" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab">
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h5.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h7.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h4.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h8.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h5.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h6.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+
+
+			</div>
+			<!-- Used tab images -->
+			<div class="tab-pane fade home_gallery_gap text-center" id="pills-used" role="tabpanel" aria-labelledby="pills-used-tab">
+				<div class=" pics animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/hs2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/hs3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/hs1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/3.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/2.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/1.jpg' %}">
+					<div class="like_n_add">
+							<span class="heart mr-3"><i class="fa fa-heart" aria-hidden="true"></i></span>
+							<span class="heart ml-3"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+					</div>
+				</div>
+
+			</div>
+			
+			<!--  tab images end-->
+			<div class="mt-3 text-center">
+				<button class="single_btn">Load More</button>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+	{% endblock %}

@@ -1,0 +1,511 @@
+{% extends 'dashboard-base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<section id="dashboard__2" class="all-page-mg">
+		<div class="container dashboard_2_container">
+			<div class="ticket__1 slider_step">
+				<div class="step__1">
+					<div class="ticker__hdr mb-3">
+						<h3 class="ticker_ttl">STEP 1: USED BACKDROP INFO</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div id="dash_slider">
+							<div id="post_sell" class="carousel slide post_slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <!-- The slideshow -->
+							  <div class="carousel-inner">
+							    <div class="carousel-item active">
+							      <img class="rectangular" src="{% static 'assets/images/1.jpg' %}">
+							    </div>
+							    <div class="carousel-item">
+							      <img class="square" src="{% static 'assets/images/2.jpg' %}">
+							    </div>
+							    <div class="carousel-item">
+							      <img class="square" src="{% static 'assets/images/3.jpg' %}">
+							    </div>
+							  </div>
+
+							  <!-- Left and right controls -->
+							  <a class="carousel-control-prev" href="#post_sell" data-slide="prev">
+							    <span class="carousel-control-prev-icon"></span>
+							  </a>
+							  <a class="carousel-control-next" href="#post_sell" data-slide="next">
+							    <span class="carousel-control-next-icon"></span>
+							  </a>
+
+							</div>
+
+							<!-- <div class="owl-carousel owl-theme">
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/1.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/2.jpg' %}"></div>
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/4.jpg' %}"></div>
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/3.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/6.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/1.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/3.jpg' %}"></div>
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/2.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/4.jpg' %}"></div>
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/5.jpg' %}"></div>
+							    <div class="item product_1"><img class="rectangular" src="{% static 'assets/images/5.jpg' %}"></div>
+							    <div class="item product_1"><img class="square" src="{% static 'assets/images/2.jpg' %}"></div>
+							</div> -->
+							<div id="counter"></div> 
+						</div>
+						</div>
+						<div class="col-md-6">
+							<h5 class="my-3">Conditon of Backdrop</h5>
+							<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+						<label class="form-check-label" for="exampleRadios1">
+							Appears as new
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1" checked="">
+						<label class="form-check-label" for="exampleRadios2">
+							Shows signs of use, but very clean
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1" checked="">
+						<label class="form-check-label" for="exampleRadios3">
+							Shows moderate wear or finish marks
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option1" checked="">
+						<label class="form-check-label" for="exampleRadios4">
+							Shows more than average wear
+						</label>
+					</div>
+					<!-- Backdrop Info -->
+					<div class="back_d_info">
+					<h5 class="my-3">Backdrop Info</h5>
+					<div class="row">
+						<div class="col-md-4">
+							<p>Image ID:</p>
+							<p>Backdrop Size:</p>
+							<p>Paid:</p>
+						</div>
+						<div class="col-md-8">
+							<p>xxxxxxxxxx</p>
+							<p>3m x 3m/118" x 118"(~10ft x 10ft)</p>
+							<p>$400.00</p>
+						</div>
+					</div>
+						</div>
+						<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label>Keep categories / keywords the same shown below.</label>
+								</div>
+								<div class="row">
+						<div class="col-md-4">
+							<p>Categories:</p>
+							<p>Keyword:</p>
+						</div>
+						<div class="col-md-8">
+							<p>xxxxx, xxxxx, xxxxxx</p>
+							<p>xxxxx, xxxxx, xxxxxx, xxxxx, xxxxxx</p>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<div class="step__2">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 2: TYPES OF USE AND KEYWORDS<span class="hold_ctrl">(Hold "ctrl" key for multiple selection)</span></h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="uses_list">
+								<ul>
+									<li>BANNERS</li>
+									<li>DANCE</li>
+									<li>FLOREDROPS</li>
+									<li>HOLIDAY</li>
+									<li>MILITARY</li>
+									<li>PARTY</li>
+									<li>PROMS</li>
+									<li>STAGE</li>
+									<li>SPORTS</li>
+									<li>STUDIO</li>
+									<li>TAILGATE</li>
+									<li>OMG</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="keyword_type">
+								<textarea class="form-control" rows="7" placeholder="Enter 8 keywords that best describe your images seperated by commas"></textarea>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+				<!-- step 2 end -->
+	
+				<!-- step 3 start -->
+				<div class="step__3">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 3: SET PRODUCT AND SHIPPING PRICE</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="step-4-form">
+								<div class="form-group">
+									<label>Backdrop Price (in USD)</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								
+								<div class="form-group">
+									<label>Local Shipping Price (Standard)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								
+								<div class="form-group">
+									<label>Local Shipping Price (Express)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								
+								<div class="form-group">
+									<label>International Shipping Price (Standard)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group">
+									<label>International Shipping Price (Express)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+
+							<p class="mt-4">Note: Take photos of the backdrop for your own references.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="step-4-timing">
+							<div class="form-group">
+								<label></label>
+									<p class="reseller_time">Reseller must ship order within <span style="color: red;">5</span> days upon receving order.</p>
+								</div>
+								<div class="form-group">
+									<label>Shipping Time (in days)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group">
+									<label>Shipping Time (in days)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group">
+									<label>Shipping Time (in days)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group">
+									<label>Shipping Time (in days)*</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group">
+									<button class="single_btn my-3">Update Live Posting</button>
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- step 3 end -->
+					<!-- step 4 -->
+					<div class="step__4">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 4: RESELLER INFO</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="First Name">
+								</div>
+						
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="Last Name">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="12345 CALIFORNIA AvE SW">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="Address 2">
+								</div>
+								<div class="form-group">
+									<select class="form-control">
+											<option>United States</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="Washington">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="SEATTLE">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="98136">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" required=""  placeholder="11122223333">
+								</div>
+
+					</div>
+					<!-- right side column -->
+					<div class="col-md-6">
+						<div class="info-add-file">
+							<div class="form-group d-flex justify-content-between">
+									<div class="add-img"><img src="{% static 'assets/images/add-logo.png' %}" alt="pdf"></div>
+							</div>
+							<div id="upload_button" class=" align-self-center">
+									<label>
+										<input type="file" ngf-select="" ng-model="new_files" multiple="">
+										<button class="single_btn">Browse...</button>
+										<span>No File Selected.</span>
+									</label>
+										<p class="demo-text mb-2">Profile / Company (200 x 200 px)</p>
+								</div>
+							
+
+						</div>
+					</div>
+
+
+					<!-- row -->
+					</div>
+					<!-- <div class="text-center"><p>Damage and Defective Item I did not recive my order</p></div> -->
+				</div>
+
+
+				</div>
+				<!-- step 4 end -->
+				<!-- step 5 start -->
+				<div class="step_5_dash">
+				<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 5: RESELLER'S TERMS</h3>
+					</div>
+					<div class="table-start my-4">
+					<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th  colspan="3" scope="col">Title</th>
+      <th scope="col">Text</th>
+      <th scope="col">Enable</th>
+      <th scope="col">+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Damage and Degective Items</th>
+      <td data-toggle="modal" data-target="#edit_terms">Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text"  scope="row">I did not recive my order</th>
+       <td data-toggle="modal" data-target="#edit_terms">Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Wrong Item</th>
+       <td data-toggle="modal" data-target="#edit_terms">Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Items can't be returned</th>
+       <td>Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Return shipping</th>
+       <td>Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">No refund policy</th>
+       <td>Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Restocking Fee</th>
+       <td>Edit</td>
+      <td>
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x"><i class="fas fa-times"></i></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+				</div>
+				<!-- step 5 end -->
+				<!-- step 6 start -->
+				<div class="step__6">
+				<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 6: FEES AND TERMS</h3>
+					</div>
+					<div class="talle-start">
+						<table class="table table-hover d2-tbl-bdr">
+						  <thead class="payment-hdr">
+						    <tr>
+						      <th scope="col">Backdrop Type \ 30 Days Posting</th>
+						      <th scope="col">Early Bird*</th>
+						      <th scope="col">Regular**</th>
+						      <th scope="col">Consecutive Posting (30 Days)</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td scope="row">ASBD Image</td>
+						      <td>5%</td>
+						      <td>10%</td>
+						      <td>5%</td>
+						     
+						    </tr>
+						    <tr>
+						       <td scope="row">ASBD Image</td>
+						      <td>8%</td>
+						      <td>15%</td>
+						      <td>5%</td>
+						      
+						    </tr>
+						    
+
+						  </tbody>
+						</table>
+					</div>
+					<div class="d2-note">
+						<p>*Early Bird Posting - Invoice date to Day 90th.</p>
+						<p>**Regular and Consecutive Posting - Start Day 91st.</p>
+					</div>
+					
+					<div class="col-md-7">
+					<div class="form-check mt-5">
+						<input class="form-check-input mt-2" type="radio" name="exampleRadios" id="exampleRadios11" value="option1" checked="">
+						<input type="text" class="form-control" placeholder="" for="exampleRadios11" required="">
+					</div>
+					<div class="form-check mt-3">
+						<input type="text" class="form-control" placeholder="" required="">
+					</div>
+					<p style="font-size: 12px; margin-left: 20px !important;">Paypal email is required to receive fund, posting and communication.</p>
+					<div class="form-check my-3">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios11" value="option1" checked="">
+						<label class="form-check-label" for="exampleRadios11">
+							I will enter my Paypal email later.
+						</label>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-md-12">
+						<div class="btm-check-term mt-5">
+							<form>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label> I understand a tracking number is required at Sales Order table to show proof shipment to Buyer within 5 days from the date of invoice</label>
+								</div>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label> I understand I will recive 100% of Buyer's payment(less paypal transaction fee) directly to my paypal account.</label>
+								</div>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label>I agree to seek Paypal Resolution Center utilizing <b>Paypal Seller Protection</b> when a dispute arises with any Buyer</label>
+								</div>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label>I agree with Domain.com <b>Terms.</b></label>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				<!-- step 8 end -->
+				<div class="buttons-d2 mt-5 mb-4">
+					<button class="d-btn">Save/Unpost</button>
+					<button class="d-btn ml-2 mr-4">Post Now</button>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+	</div>
+	
+	
+	<!-- Modal -->
+<div id="edit_terms" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">EDIT TERMS</h5>
+      </div>
+      <div class="modal-body">
+      	<div class="form-group">
+			<input type="text" class="form-control" required="" placeholder="Damage and Degective Items">
+		</div>
+       <textarea class="form-control" rows="7" placeholder="Enter terms"></textarea>
+      </div>
+      <div class="m-footer text-center mb-3">
+      	<button type="button" class="single_btn">Submit</button>
+        <button type="button" class="single_btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

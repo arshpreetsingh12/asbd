@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style type="text/css">// best seen at 1500px or less
+
+/*html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+}*/
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    bottom: 0;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    bottom: -26px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+</style>
+
+	<!-- Section Start-->
+
+	<section class="faq_page">
+		<div class="container">
+			
+		</div>
+</section>
+<section class="why_content">
+	<div class="container">
+		<div class="about_data">
+		<div class="faq_head">
+			<h2>FAQ</h2>
+		</div>
+		<div class="about_faq-list">
+						<div class="faq_heading mt-5 mb-3">
+							<h5>Resgistration and Login</h5>
+							<div class="border-bottom my-2 text-left" style="margin-left: 0;"></div>
+						</div>
+						<div id="accordion1">
+							<div class="card">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+											1. How do i register ?
+										</label>
+									</h5>
+								</div>
+
+								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion1" style="">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingTwo">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											2. What is an email address verification?
+										</label>
+									</h5>
+								</div>
+								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion1">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingThree">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											3. Why do i need verify my email ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion1">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingfour">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+											4. What should i do if i cannot log into my account ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion1">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingfive">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+											5. What should i do if i did not receive the email address verification email ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion1">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingsix">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+											6. How can i change my login password ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordion1">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- accordian 2 -->
+			<div class="mt-2">
+						<div class="faq_heading mt-5 mb-3">
+							<h5>Events Photos</h5>
+							<div class="border-bottom my-2 text-left" style="margin-left: 0;"></div>
+						</div>
+						<div id="accordion">
+							<div class="card">
+								<div class="card-header" id="headingseven">
+									<h5 class="mb-0">
+										<label class="btn btn-link" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+											1. What is Event Photos ?
+										</label>
+									</h5>
+								</div>
+
+								<div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingeight">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+											2. How to post an event?
+										</label>
+									</h5>
+								</div>
+								<div id="collapseeight" class="collapse" aria-labelledby="headingeight" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingnine">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsenine" aria-expanded="false" aria-controls="collapseThree">
+											3. Why do i need verify my email ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapsenine" class="collapse" aria-labelledby="headingnine" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingten">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+											4. What should i do if i cannot log into my account ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapseten" class="collapse" aria-labelledby="headingten" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingelven">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseelven" aria-expanded="false" aria-controls="collapseelven">
+											5. What should i do if i did not receive the email address verification email ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapseelven" class="collapse" aria-labelledby="headingelven" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingtwelve">
+									<h5 class="mb-0">
+										<label class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
+											6. How can i change my login password ?
+										</label>
+									</h5>
+								</div>
+								<div id="collapsetwelve" class="collapse" aria-labelledby="headingtwelve" data-parent="#accordion">
+									<div class="card-body">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordian end -->
+		</div>
+	</div>
+	</div>
+</section>
+<!-- animation wave -->
+	<section class="about_page">
+<div class="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+</section>
+
+	
+
+	
+
+	<!-- Footer End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+	
+	{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+
+
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- <section class="content-header">
+      <h1>
+        Page Header
+        <small>Optional description</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
+    </section> -->
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <div class="manage_admin">
+         <div class="add_min d-flex justify-content-between"> 
+    <h3>Shipping Add</h3>
+    </div>
+    <div class="mt-3">
+      <div class="d-flex align-items-center"><div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+            <label class="form-check-label" for="exampleRadios1">
+              Local
+            </label>
+          </div>
+        <div class="form-check ml-5">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+            <label class="form-check-label" for="exampleRadios1">
+              International
+            </label>
+          </div>
+        </div>
+    </div>
+    <div class="my-5">
+      <div class="d-flex align-items-center"><div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+            <label class="form-check-label" for="exampleRadios1">
+              Standard
+            </label>
+          </div>
+        <div class="form-check ml-4">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+            <label class="form-check-label" for="exampleRadios1">
+              Express
+            </label>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-6">
+
+                  <div class="form-group">
+                    <label>*Shipping Name</label>
+                   <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group">
+                    <label>*Weight From</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  <div class="form-group">
+                    <label>*Shipping Fee</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                  </div>
+    <div class="col-12 col-sm-6 col-md-6">
+      
+      <div class="form-group">
+                    <label>*Weight To</label>
+                    <input type="text" class="form-control" required="" placeholder="gogobill737@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label>*Shipping Time(days)</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+    </div>
+</div>
+  
+
+       
+        <button class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button> 
+        <button class="delete btn btn-orange"><span><i class="fa fa-ban" aria-hidden="true"></i></span> Cancel</button>
+     
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  {% endblock %}

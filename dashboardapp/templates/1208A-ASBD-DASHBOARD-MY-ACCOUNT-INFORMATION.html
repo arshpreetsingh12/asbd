@@ -1,0 +1,163 @@
+{% extends 'dashboard-base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+	<section class="all-page-mg">
+		<div class="container">
+			<div class="my-frofile-form">
+				<h1 class="my-account-heading">MY ACCOUNT / PROFILE<span class="not-verify">-Not verify yet</span></h1>
+						<form>
+							<div class="row">
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>First Name*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Email Address*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Password*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Company Name</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Paypal Id</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label class="font-weight-bold">Billing Address*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Country*</label>
+										<select class="form-control">
+											<option></option>
+											<option>United State</option>
+											<option>London</option>
+											<option>America</option>
+											<option>Japan</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>City*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Credit Card Info</label>
+										<input type="text" class="form-control" required>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>Last Name*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Old Password*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Confirm Password*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Website</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Phone*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label class="">Address 2</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label class="">State*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="form-group">
+										<label>Zip*</label>
+										<input type="text" class="form-control" required>
+									</div>
+									<div class="d-flex">
+										<div class="form-group expitation">
+											<label>Expiration Date</label>
+											<input type="text" class="form-control" required>
+										</div>
+										<div class="form-group cvv ml-3">
+											<label>CVV</label>
+											<input type="text" class="form-control" required>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="form-second-section">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group py-3 mr-4 d-flex justify-content-between">
+											<div id="upload_button" class=" align-self-center">
+											    <label>
+											      <input type="file" ngf-select ng-model="new_files" multiple>
+											      <button class="single_btn">Browse...</button> 
+											      <span>No File Selected.</span>
+											    </label>
+											    <p class="upload-text">Profile / Company (200 x 200 px)</p>
+											</div>
+											<div class="cb-logo"><img src="{% static 'assets/images/com-logo.png' %}" alt="company"></div>
+										</div>
+										<div class="form-group py-3 mr-4 d-flex justify-content-between">
+											<div id="upload_button"  class=" align-self-center">
+											    <label>
+											      <input type="file" ngf-select ng-model="new_files" multiple>
+											       <button class="single_btn">Browse...</button> 
+											      <span>No File Selected.</span>
+											    </label>
+											    <p class="upload-text mb-2">Business License - optional</p>
+											    <p class="upload-text">Displaying business license will show customer<br>the business is legimimate</p>
+											</div>
+											<div class="cb-logo"><img src="{% static 'assets/images/adobe.png' %}" alt="pdf"></div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Message*</label>
+											<textarea class="form-control" rows="6" placeholder="About Seller"></textarea>
+										</div>
+									</div>
+									
+									
+									<div class="text-left send_btn pt-3">
+										 <!-- file source -->
+											<div class="checkbox-container mb-4">
+										        <label class="checkbox-label">
+										            <input type="checkbox">
+										            <span class="checkbox-custom rectangular"></span>
+										            <span class="input-title">I agree with<span class="d-domain">Domain.com</span>terms</span>
+										        </label>
+										        
+										     </div>
+										<button class="d-btn_sub_c">Submit</button>
+										<button class="d-btn_sub_c ml-2 mr-4">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+			
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<style> 
+	.login_sign_page .nav-link.active {
+    background-color: #33931b;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+a {
+    color: unset;
+}
+
+</style>
+
+<section class="login_page">
+	<div class="container">
+		<div class="row">
+						<div class="offset-lg-3 offset-md-2 offset-sm-12"></div>
+						<div class="col-lg-6 col-md-8 col-sm-12">
+								{% if messages %}
+									{% for message in messages %}
+				    				{{ message }}
+				    				{% endfor %}
+										
+									{% endif %}
+							<div class="login_sign_page">
+								<ul class="nav nav-tabs" id="myTab" role="tablist">
+									<li class="nav-item w-50">
+										<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Login</a>
+									</li>
+									<li class="nav-item w-50">
+										<a class="nav-link active show" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Register</a>
+									</li>
+								</ul>
+
+								<form action="{% url 'login' %}" method="post">
+									{% csrf_token %}
+								<div class="tab-content" id="myTabContent">
+									<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+										<div class="login-area login-bg">
+											<div class="login_details py-3">
+												<label>Email Address</label>
+												<input type="email" name="email" class="form-control" required="">
+											</div>
+											<div class="login_details pb-3">
+												<label>Password</label>
+												<input type="password" name="password" class="form-control" required="">
+											</div>
+											<div class="text-center capcha_img">
+												<img src="{% static 'assets/images/capcha.png' %}" class="img-fluid" alt="capcha">
+											</div>
+											<div class="login_achor_btn mt-3" style="border: 0;">
+												<div class="login-brn">
+													<!-- <a href="#">Login</a> -->
+													<button type="submit" class="login_btn">Login</button>
+												
+												</div>
+											</div>
+				<!-- style="color: unset;"							 -->
+									<div class="mt-2 mb-4">
+												<a  href="{% url 'forget_password' %}">Forgot password?</a>	
+											</div>
+											<div class="reg_with">
+											<p>--------------Login With---------------</p>
+											</div>
+											<div class="login_social d-flex mt-3">
+												<div class="login_fb w-50">
+													<a href="{% url 'social:begin' 'facebook' %}">
+														<!-- <i class="fab fa-facebook-f"></i> -->
+														Facebook
+													</a>
+												</div>
+												<div class="gp_btn w-50">
+													<a href="{% url 'social:begin' 'google-oauth2' %}">
+														<!-- <i class="fab fa-google-plus-g"></i> -->
+														Google+
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+									
+									<div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+										<div class="sign-area">
+											<div class="row">
+												<div class="col-md-6 col-sm-12">
+													<div class="login-area">
+														<div class="login_details py-3">
+															<form action="{% url 'registration' %}" method="post" id="registration_form">
+														{% csrf_token %}
+															<label>First Name</label>
+															<input type="text" name="f_name" class="form-control" required="">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="login_details py-3">
+														<label>Last Name</label>
+														<input type="text" name="l_name" class="form-control" required="">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6 col-sm-12">
+													<div class="login-area">
+														<div class="login_details py-3">
+															<label>Email Address</label>
+															<input type="email" id="email" name="parent_email" class="form-control" required="">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="login_details py-3">
+														<label>Retype Email</label>
+														<input type="email" id="remail"  class="form-control" required="">
+														<span style="display: none; color: red;" id="mismatch_email">Email does not match</span>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6 col-sm-12">
+													<div class="login-area">
+														<div class="login_details py-3">
+															<label>Enter Password</label>
+															<input type="password" name="parent_password" id="password" class="form-control" required="">
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="login_details py-3">
+														<label>Confirm Password</label>
+														<input type="password" id="confirm_password" class="form-control" required="">
+														<span style="display: none; color: red;" id="mismatch_pass">Password does not match</span>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6 col-sm-12">
+													<div class="login-area">
+														<div class="login_details py-3">
+															<label>Country</label>
+														<!-- 	<select name="" id="" class="form-control"> -->
+																<!-- <option value="">United States</option>
+																<option value="">India</option> -->
+															{% load countries %}
+															{% get_countries as countries %}
+															<select id="" name="parent_country" class="form-control">
+															<option>-Country-</option>
+															{% for country in countries %}
+														    <option value="{{ country.name }}">{{ country.name }}</option>
+															{% endfor %}
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-sm-12">
+													<div class="login_details py-3">
+														<label>State</label>
+														<input type="text" name="state" class="form-control" required="">
+													</div>
+												</div>
+											</div>
+											<div class="text-center capcha_img">
+												<img src="{% static 'assets/images/capcha.png' %}" class="img-fluid" alt="capcha">
+											</div>
+											<div class="mt-3">
+												<label class="payment_gateway_checkbox"><input type="checkbox" name="terms" value="True" required=""> I agree with XOimages terms
+													
+													<span class="checkmark"></span>
+												</label>
+											</div>
+											<div class="login_achor_btn mt-3 mb-3" style="border: 0;">
+												<div class="login-brn">
+													<!-- <a href="#">Register</a> -->
+													<button type="submit" class="reg_btn">Register</button>
+												</div>
+											</div>
+											<div class="reg_with">
+											<p>--------------Register With---------------</p>
+											</div>
+											<div class="login_social d-flex mt-3">
+												<div class="login_fb w-50">
+													<a href="{% url 'social:begin' 'facebook' %}">
+														<!-- <i class="fab fa-facebook-f"></i> -->
+														Facebook
+													</a>
+												</div>
+												<div class="gp_btn w-50">
+													<a href="{% url 'social:begin' 'google-oauth2' %}">
+														<!-- <i class="fab fa-google-plus-g"></i> -->
+														Google+
+													</a>
+												</div>
+											</div>
+										</div>
+										
+										<!-- 	<div class="login-area px-3">
+												<div class="login-area px-3">
+												<div class="login_details py-3">
+													<label>Email Address</label>
+													<input type="text" class="form-control" required>
+												</div>
+												<div class="login_details pb-3">
+													<label>Password</label>
+													<input type="password" class="form-control" required>
+												</div>
+												<div class="login_achor_btn mt-3">
+													<div class="login-brn">
+														<a href="#">Login</a>
+													</div>
+												</div>
+												<div class="mt-2 mb-4">
+													<a href="#">Forget password?</a>	
+												</div>
+												<div class="login_social d-flex">
+													<div class="login_fb w-50">
+														<a href="#">
+															<i class="fab fa-facebook-f"></i>
+															facebook
+														</a>
+													</div>
+													<div class="gp_btn w-50">
+														<a href="#">
+															<i class="fab fa-google-plus-g"></i>
+															Google+
+														</a>
+													</div>
+												</div>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							</form>
+	</div>
+</section>
+<!-- animation wave -->
+	
+
+	
+
+	<!-- Footer Start-->
+
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+
+{% endblock %}

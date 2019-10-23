@@ -1,0 +1,55 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+
+    <section class="content container-fluid">
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+          <div class="d-flex justify-content-between">
+	      		<h4>Type of Use</h4>
+            <!-- <button type="button" class="btn btn-success">Add</button> -->
+          </div>
+          <div class="col-md-6">
+	      		<div class="mb-2 blog_list_table d-flex">
+	      			<input type="text" class="form-control" placeholder="Enter use type">
+              <button class="btn btn-success ml-4">Add</button>
+	      		</div>
+            <div class="mt-2">
+                      <label for="">*Types of use</label>
+                      <textarea name="" id="" rows="16" class="w-100" placeholder="Banners\nDance\nFestival\nFall-In\nFloordrops\nMilitary\nMural\nOMG\nParty\nProms\nSports\nTailgate\nTheater\nThrowback"></textarea>
+                    </div>
+          </div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+{% endblock %}
+<!--  
+     <script>
+
+        $(document).ready(function(){
+      var selectedClass = "";
+      $(".filter").click(function(){
+        selectedClass = $(this).attr("data-rel");
+        $("#gallery").fadeTo(100, 0.1);
+        $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+        setTimeout(function() {
+          $("."+selectedClass).fadeIn().addClass('animation');
+          $("#gallery").fadeTo(300, 1);
+        }, 300);
+      });
+
+    });
+          var textAreas = document.getElementsByTagName('textarea');
+
+Array.prototype.forEach.call(textAreas, function(elem) {
+    elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
+});
+     </script>
+</body>
+</html> -->

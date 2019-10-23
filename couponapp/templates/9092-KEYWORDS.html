@@ -1,0 +1,31 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+   
+    <section class="content container-fluid">
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+          <div class="d-flex justify-content-between">
+	      		<h4>Keywords</h4>
+            <!-- <button type="button" class="btn btn-success">Add</button> -->
+          </div>
+          <div class="col-md-6">
+	      		<div class="mb-2 blog_list_table d-flex">
+	      			<input type="text" class="form-control" placeholder="Enter Keywords">
+              <button class="btn btn-success ml-4">Add</button>
+	      		</div>
+            <div class="mt-2">
+                      <label for="">*Keywords</label>
+                      <textarea name="" id="" rows="16" class="w-100" placeholder="50s\n60s\n70s\nAbstract\nAmericas\nAnimals\nAnniversary\nArches\nArena\nAurora\nBirthday\nBoats\nBridges\nSports\nTailgate\nTheater\nThrowback"></textarea>
+                    </div>
+          </div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  
+  {% endblock %}

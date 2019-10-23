@@ -1,0 +1,102 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+
+  <div class="content-wrapper">
+  
+    <section class="content container-fluid">
+      <div class="manage_admin">
+         <div class="add_min d-flex justify-content-between"> 
+          <form action="{% url 'edit_admin' user.id %}" method="post" id="registration_form">
+            {% csrf_token %}
+    <h3>Edit Staff</h3>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+      
+    {% endif %}
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-6">
+
+                  <div class="form-group">
+                    <label>*Role</label>
+                    <select class="form-control" name="role">
+                    {% for group in groups %}
+                      <option value="{{ group.id }}" {% if group.id == current_id %} selected {% endif %} >{{ group.name|title }}</option>
+                      
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>*Name</label>
+                    <input type="text" class="form-control" value="{{user.first_name}}"  name="name"  placeholder="Admin">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label><span class="not-verify">-Not verify yet</span>
+                    <input type="password" class="form-control" id="password" name="password" >
+                  </div>
+                      <div class="form-group">
+                    <label>Retype Password</label>
+                    <input type="password" class="form-control" id="confirm_password" name="repassword" >
+                    <span style="display: none; color: red;" id="mismatch_pass">Password does not match</span>
+                  </div>
+                 
+                </div>
+                  
+    <div class="col-12 col-sm-6 col-md-6">
+       <div class="form-group">
+
+                    <label>Status</label>
+                    <select class="form-control" name="status">
+          
+                      <option value="A">Active</option>
+            
+                      <option value="I">Inactive</option>
+                     
+                    </select>
+                  </div>
+      <div class="form-group">
+                    <label>*Email</label>
+                    <input type="text" class="form-control"  value="{{user.email}}" name="email">
+                  </div>
+               
+                  <div class="form-group">
+                    <label>Old Password</label>
+                    <input type="password" class="form-control" name="old_pass" >
+                  </div>
+                
+      
+    </div>
+
+  </div>
+  <div class="access">
+    <h3>Access</h3>
+    <div class="access_list">
+          <ul>
+              {% for model in model_list %}
+             
+            <li>
+
+              <label class="payment_gateway_checkbox"><input type="checkbox" name="models[]" value="{{ model.id }}" {% if model.slug in selected_permissions %} checked  {% endif %}> 
+                <span class="checkmark"></span>{{model.name|title}}
+              
+            </li>
+           {% endfor %}
+      
+
+         
+          </ul> 
+    </div>
+  </div>
+       
+        <button type="submit" class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button> 
+        <button class="delete btn btn-orange"><span><i class="fa fa-ban" aria-hidden="true"></i></span> Cancel</button>
+      </form>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+{% endblock %}

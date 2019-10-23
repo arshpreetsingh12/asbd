@@ -1,0 +1,94 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+
+  <div class="content-wrapper">
+  
+    <section class="content container-fluid">
+      <div class="manage_admin">
+         <div class="add_min d-flex justify-content-between"> 
+          <form action="add_staff" method="post" id="registration_form">
+            {% csrf_token %}
+    <h3>Add Staff</h3>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+      
+    {% endif %}
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-6">
+
+                  <div class="form-group">
+                    <label>*Role</label>
+                    <select class="form-control" name="role">
+                    {% for group in group_list %}
+                      <option value="{{ group.id }}">{{ group.name|title }}</option>
+                      
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>*Name</label>
+                    <input type="text" class="form-control"  name="name" required="" placeholder="Admin">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label><span class="not-verify">-Not verify yet</span>
+                    <input type="password" class="form-control" id="password" name="password" required="">
+                  </div>
+                 
+                </div>
+                  
+    <div class="col-12 col-sm-6 col-md-6">
+       <div class="form-group">
+                    <label>Status</label>
+                    <select class="form-control" name="status">
+                      <option value="A">Active</option>
+                      <option value="I">Inactive</option>
+                     
+                    </select>
+                  </div>
+      <div class="form-group">
+                    <label>*Email</label>
+                    <input type="text" class="form-control" required="" name="email" placeholder="gogobill737@gmail.com">
+                  </div>
+                   <div class="form-group">
+                    <label>Retype Password</label>
+                    <input type="password" class="form-control" id="confirm_password" name="repassword" required="">
+                    <span style="display: none; color: red;" id="mismatch_pass">Password does not match</span>
+                  </div>
+                 <!--  <div class="form-group">
+                    <label>Old Password</label>
+                    <input type="text" class="form-control" required="">
+                  </div>
+                 -->
+      
+    </div>
+
+  </div>
+  <div class="access">
+    <h3>Access</h3>
+    <div class="access_list">
+          <ul>
+              {% for model in model_list %}
+            <li>
+
+              <label class="payment_gateway_checkbox"><input type="checkbox" name="models[]" value="{{ model.id }}">  
+                <span class="checkmark"></span>{{model|title}}
+            </li>
+           {% endfor %}
+         
+          </ul> 
+    </div>
+  </div>
+       
+        <button type="submit" class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button> 
+        <button class="delete btn btn-orange"><span><i class="fa fa-ban" aria-hidden="true"></i></span> Cancel</button>
+      </form>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+{% endblock %}

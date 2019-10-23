@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	
+
+	<section class="home-banner">
+	<div class="banenr">
+		<div class="back-svg"></div>
+		<div class="container">
+			<div class="banner-content">
+				<h1 class="header-title">Redefining Your Photo Perspective!</h1>
+				
+				<form>
+					 <div class="inner-form banner-form">
+					 	
+					 	<div class="input-field first-select">
+					 		<select class="report-form">
+					 			<option value="" disabled="" selected="">Type of Use</option>
+					 			<option value="1">New</option>
+					 			<option value="1">Used</option>
+					 			<option value="1">Custom</option>
+					 		</select>
+					 	</div>
+					 	<div class="input-field first-wrap">
+					 		<input id="search" type="text" placeholder="Wishdrop Secret Mission Code">
+					 	</div>
+					 	<div class="input-field second-wrap">
+					 		<input id="location" type="text" placeholder="Keywords">
+					 	</div>
+					 	<div class="input-group-prepend">
+						<span class="input-group-text font-edit" id="basic-text1"><i class="fas fa-search" aria-hidden="true"></i></span>
+					</div>
+					 </div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</section>
+	
+	<section class="why-us-section bg-light">
+
+		<div class="container">
+			<div class="about-text py-5">
+				<h2 class="mb-3">Why us</h2>
+				<p class="pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section-no-padding bg-light">
+		<div class="hero-wrap">
+			<!-- <div class="overlay"></div> -->
+			<div class="hero-img-text">
+				<div class="author-image text img p-md-5" style="background-image: url({% static 'assets/images/night-1.jpg' %});">
+				</div>
+				<div class="author-info text p-4 mt-5 mb-5">
+					<div class="desc">
+						<h3 class="mb-4">Backdrop Images </h3>
+						<p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+						<ul class="mb-4">
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+						</ul>
+						<ul class="ftco-social mt-3">
+							<li class=""><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class=""><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class=""><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- second image -->
+		<div class="hero-wrap py-5">
+			<!-- <div class="overlay"></div> -->
+			<div class="hero-img-text">
+				<div class="author-info text p-4 mt-5 mb-5"  style="z-index: 9;">
+					<div class="desc_2">
+						<h3 class="mb-4">Wishdrops </h3>
+						<p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+						
+						<ul class="ftco-social mt-3">
+							<li class=""><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class=""><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class=""><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="author-image text img p-md-5" style="background-image: url({% static 'assets/images/acor.jpg' %});">
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- how it works -->
+<section class="how-it-work" id="work_flow">
+	<div class="back-svg-w"></div>
+	<div class="header-shape2"></div>
+	<div class="header-shape3"></div>
+	<div class="container">
+		<div class="work-content">
+			<h2>How It Works</h2>
+			<div class="process-icon">
+				<div class="row">
+					<div class="col-md-4">
+				<div class="icon_1"><img src="{% static 'assets/images/icon1.png' %}">
+					<h6>Choose Type of Backdrop</h6>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+				<div class="col-md-4">
+				<div class="icon_1"><img src="{% static 'assets/images/icon2.png' %}">
+					<h6>Crop and Edit</h6>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+				<div class="col-md-4">
+				<div class="icon_1"><img src="{% static 'assets/images/icon3.png' %}">
+					<h6>Preview and Pay</h6>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- gallery section -->
+
+<section class="gallery-section bg-light">
+	<div class="back-svg2"></div>
+	<div class="container-fluid">	
+		<ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link home_btn active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link home_btn" id="pills-new-tab" data-toggle="pill" href="#pills-new" role="tab" aria-controls="pills-new" aria-selected="false">New</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link home_btn" id="pills-used-tab" data-toggle="pill" href="#pills-used" role="tab" aria-controls="pills-used" aria-selected="false">Used</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link home_btn" id="pills-custom-tab" data-toggle="pill" href="#pills-custom" role="tab" aria-controls="pills-custom" aria-selected="false">Custom</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="pills-tabContent">
+			<!-- All tab images -->
+			<div class="tab-pane home_gallery_gap fade show active text-center" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h8.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h7.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h4.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h4.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+				</div>
+
+			</div>
+			<!-- New tab images -->
+			<div class="tab-pane fade home_gallery_gap text-center" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab">
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h5.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h7.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h4.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h8.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h5.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h2.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/h6.jpg' %}">
+				</div>
+
+
+			</div>
+			<!-- Used tab images -->
+			<div class="tab-pane fade home_gallery_gap text-center" id="pills-used" role="tabpanel" aria-labelledby="pills-used-tab">
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/hs2.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/hs3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/hs1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/p1.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p2.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/2.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+
+
+
+			</div>
+			<!-- Custom tab images -->
+			<div class="tab-pane fade home_gallery_gap text-center" id="pills-custom" role="tabpanel" aria-labelledby="pills-custom-tab">
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/hs1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/p1.jpg' %}">
+				</div>
+				<div class=" pics_2 animation all 2">
+					<img src="{% static 'assets/images/h1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/hs2.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/hs3.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/h3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/hs1.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/p1.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p2.jpg' %}">
+				</div>
+				<div class="pics animation all 2">
+					<img src="{% static 'assets/images/p3.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/2.jpg' %}">
+				</div>
+				<div class="pics_2 animation all 2">
+					<img src="{% static 'assets/images/3.jpg' %}">
+				</div>
+			</div>
+			<!--  tab images end-->
+		</div>
+
+	</div>
+			<div class="back-svg-w2"></div>
+
+</section>
+
+<!-- gallery section -->
+	
+	
+	<!-- Section End-->
+	<section class="booster-site">
+		<div class="header-shape-2"></div>
+		<div class="container">
+			<h2 class="all-hdr-tag">Booster Sites</h2>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="ybid_boost">
+					<img src="{% static 'assets/images/ybid.png' %}">
+				</div>
+				</div>
+				<div class="col-md-6 align-self-center">
+					<h3 class="mb-3">YBID</h3>
+					<p>Insects in the family Elateridae are commonly called click beetles. Other names include elaters, snapping battels, spring battels or skipjads. This family defined by William Elford Leach in 1815. They are cosmopolitan battle family.</p>
+				</div>
+			</div>
+			<div class="row m__row">
+				<div class="col-md-6 align-self-center">
+					<h3 class="mb-3">TICKET</h3>
+					<p>Insects in the family Elateridae are commonly called click beetles. Other names include elaters, snapping battels, spring battels or skipjads. This family defined by William Elford Leach in 1815. They are cosmopolitan battle family.</p>
+				</div>
+				<div class="col-md-6">
+					<div class="ybid_boost">
+					<img src="{% static 'assets/images/ticket1.png' %}" style="width: 57%;">
+				</div>
+				</div>
+			</div>
+		</div>
+	
+
+	</section>
+
+
+	
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			
+		});
+		
+	</script> -->
+{% endblock %}

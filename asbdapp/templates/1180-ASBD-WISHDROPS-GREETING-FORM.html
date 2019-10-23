@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<section class="wisedrop_greeting all-page-mg">
+		<div class="container">
+			<h4 class="text-center my-3">JOHN DOE'S SECRET MISSION</h4>
+			<form>
+			<div class="form-group">
+				<textarea class="form-control greetings_form" id="exampleFormControlTextarea1" data-min-words="12" placeholder="Enter Header" rows="1"></textarea>
+				<div class="mt-2 text-right"><p>(0/20 charactors)</p></div>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" id="exampleFormControlTextarea1" data-min-words="12" placeholder="Enter Message" rows="5"></textarea>
+				<div class="mt-2 text-right"><p>(0/130 charactors)</p></div>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control greetings_form" id="exampleFormControlTextarea1" data-min-words="12" placeholder="Enter Your Name" rows="1"></textarea>
+				<div class="mt-2 text-right"><p>(0/20 charactors)</p></div>
+			</div>
+
+			<div class="upload">
+				<div class="choose_file_button">
+									<span class="font-weight-bold">Upload / Browse</span>
+									<span class="ml-3">(Headshot 800x800 px Format .jpg)</span>
+									<input type="file" class="form-control-file" placeholder="dflgailsdug">
+								</div>
+								<div class="upload-img my-5">
+
+								</div>
+			</div>
+		</form>
+		<div class="mission-btn">
+			<button class="mission_accomp">Mission Accomplished</button>
+			<p>Maximum Surprise requires Maximum Secrecy.
+		</div>
+		</div>
+	</section>
+
+		<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-long-arrow-alt-up"></i></a>
+	</div>
+{% endblock %}

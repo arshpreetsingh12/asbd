@@ -1,0 +1,67 @@
+{% extends 'admin-base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="wrapper">
+  <div class="content-wrapper">
+   
+    <section class="content container-fluid">
+      <h1 class="text-center mb-3">Reseller Posting  Fees</h1>
+    	<!-- paypal content -->
+    	<div class="manage_admin">
+	    	<div class="s_paypal_struct">
+	      		<div class="">
+              <div>
+                <h5 class="my-4 asbd_fee">Fees</h5>
+               
+
+                <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Backdrop Type</th>
+      <th scope="col">Early Bird<span class="hed_norm">(Invoice date to day 90)</span></th>
+      <th scope="col">Regular<span class="hed_norm">(Day 90 and over)</span></th>
+      <th scope="col">Early Bird<span class="hed_norm">(30 days posting)</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASBD Image</td>
+      <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="15"><div class="ml-2">%</div>
+                       </div></td>
+     <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="20"><div class="ml-2">%</div>
+                       </div></td>
+                      <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="5"><div class="ml-2">%</div>
+                       </div></td>
+    </tr>
+   <tr>
+      <td>Non-ASBD Image</td>
+      <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="15"><div class="ml-2">%</div>
+                       </div></td>
+     <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="20"><div class="ml-2">%</div>
+                       </div></td>
+                      <td> <div class="w-25 mr-4 d-flex align-items-center">
+                         <input type="text" class="form-control" placeholder="5"><div class="ml-2">%</div>
+                       </div></td>
+    </tr>
+      
+  </tbody>
+</table>
+               
+                
+              </div>
+	      		</div>
+	    	</div>
+    	</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+
+{% endblock %}
