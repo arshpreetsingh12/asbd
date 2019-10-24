@@ -10,6 +10,7 @@ urlpatterns = [
 
 	path('blog_list', login_required(BlogList.as_view()), name="blog_list"),
 	path('add_blog', login_required(AddBlog.as_view()), name="add_blog"),
-
+	path('edit_blog/<int:blog_id>', login_required(EditBlog.as_view()), name="edit_blog"),
+	 path('single_blog', SingleBlog.as_view(), name="single_blog"),
 
 ]

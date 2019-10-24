@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'imagesapp',
     'couponapp',
     'pagesapp',
+    'configuration',
 ]
 
 MIDDLEWARE = [
@@ -159,6 +160,9 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '../static/')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
@@ -167,6 +171,8 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 # LOGIN_REDIRECT_URL = '/used'
 LOGIN_URL = 'admin-login'
 LOGIN_REDIRECT_URL='admin-home'
+
+
 
 
 SOCIAL_AUTH_FACEBOOK_KEY = '573662540037692'

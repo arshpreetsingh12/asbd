@@ -19,7 +19,6 @@ urlpatterns = [
     path('contact_us', ContactUs.as_view(), name="contact_us"),
     path('terms', Terms.as_view(), name="terms"),
     path('privacy', Privacy.as_view(), name="privacy"),
-    path('blog', Blog.as_view(), name="blog"),
     path('registration', Registration.as_view(), name="registration"),
     path('login', Login.as_view(), name="login"),
     path('logout', LogoutView.as_view(), name="logout"),

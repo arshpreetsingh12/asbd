@@ -71,7 +71,7 @@ class WishDropGreeting(TemplateView):
 class AboutUs(TemplateView):
 	template_name = '1201-NAV-BAR-ABOUT.html'
 	def get(self, request, *args, **kwargs):
-		return render(request,self.template_name,{})
+		return render(request,self.template_name,locals())
 
 
 
@@ -98,11 +98,6 @@ class Terms(TemplateView):
 
 class Privacy(TemplateView):
 	template_name = '1206-NAV-BAR-PRIVACY.html'
-	def get(self, request, *args, **kwargs):
-		return render(request,self.template_name,{})
-
-class Blog(TemplateView):
-	template_name = '1207-NAV-BAR-BLOG.html'
 	def get(self, request, *args, **kwargs):
 		return render(request,self.template_name,{})
 

@@ -12,7 +12,7 @@ urlpatterns = [
 	path('add_staff', login_required(AddStaff.as_view()), name="add_staff"),
 	path('users', login_required(Users.as_view()), name="users"),
 	
-	path('general_configuration', login_required(GeneralConfiguration.as_view()), name="general_configuration"),
+	
 	path('company_profile', login_required(CompanyProfile.as_view()), name="company_profile"),
 	
 	path('paypal', login_required(Paypal.as_view()), name="paypal"),

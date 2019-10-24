@@ -5,7 +5,7 @@
 <div class="wrapper">
 
   <div class="content-wrapper">
-    <form  method="post">
+    <form action="add_page" method="post" enctype="multipart/form-data">
       {% csrf_token %}
     <section class="content container-fluid">
       <h1 class="text-center">Add Page</h1>
@@ -18,14 +18,18 @@
              <div class="">
                <textarea name="page_content" id="editor1_2"  rows="10" cols="80"> This is my textarea to be replaced with CKEditor.</textarea>
              </div>
-<div class="form-group d-flex my-3 align-items-center">
+             <div class="form-group">
+              <label>Image</label>
+          <input type="file" class="form-control"  name="img" required="">
+        </div>
+          <div class="form-group d-flex my-3 align-items-center">
           <label style="white-space: nowrap;">url fundgraphers.com/</label>
-          <input type="text" class="form-control ml-4" placeholder="Terms" id="page_url" name="page_url" required >
+          <input type="text" class="form-control ml-4" placeholder="Terms" id="page_url" name="page_url" required readonly>
       </div>
 
       <div class="my-3">
         <button class="admin_btn btn btn-primary">Preview</button>
-         <button type="submit" class="admin_btn btn btn-primary">Save</button>
+         <button  class="admin_btn btn btn-primary">Save</button>
         
       </div>
 
@@ -39,11 +43,9 @@
 {% endblock %}
 {% block extrascript %}
   <script>
-    $(document).ready(function() {
+   
       CKEDITOR.replace( 'editor1_2', {
-        
-      });
-     CKEDITOR.config.autoParagraph = false;
-      });
+     autoParagraph : false
+     });
   </script>
 {% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'admin-base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+ 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <h1 class="text-center mb-3">Configuration Site</h1>
+      <!-- paypal content -->
+      <div class="manage_admin">
+        <div class="s_paypal_struct">
+            <div class="mb-2">
+              <div class="row">
+                <div class="col-md-8">
+                  <form method="post">
+                    {% csrf_token %}
+                    <div class="mt-2">
+                      <label for="">Name Site</label>
+                      <input type="text" class="form-control" name="site_name" value="{{config.site_name}}" placeholder="Fundgraphers">
+                    </div>
+                    <div class="mt-3">
+                      <label for="">Url</label>
+                      <input type="url" class="form-control" name="site_url" value="{{config.site_url}}" placeholder="fundgraphers.com">
+                    </div>
+                    <div class="mt-2">
+                      <label for="">Description</label>
+                      <textarea id="" rows="10" name="description" class="w-100" placeholder=" Here de description of the site">{{config.description}}</textarea>
+                      <div class="text-right"><span>350 Chars Maximum</span></div>
+                    </div>
+
+                    <div class="mt-2">
+                      <label for="">Tags</label>
+                     <input type="text" name="tags" value="{{config.tags}}" class="form-control" data-role="tagsinput" name="tags">
+                      <div class="text-right"><span>15 Tags Maximum</span></div>
+                    </div>
+                     <div class="mt-2">
+                      <label for="">URL youtube video promo home</label>
+                      <input type="url" name="youtube" value="{{config.youtube}}" class="form-control">
+                    </div>
+                    <div class="mt-2">
+                      <label for="">Facebook URL</label>
+                      <input type="url" name="facebook" value="{{config.facebook}}"  class="form-control">
+                    </div>
+                    <div class="mt-2  mb-3">
+                      <label for="">Twitter URL</label>
+                      <input type="url" name="twiiter" value="{{config.twiiter}}" class="form-control">
+                    </div>
+                     <div class="mt-2  mb-3">
+                      <label for="">Google URL</label>
+                      <input type="url" name="google"  value="{{config.google}}"  class="form-control">
+                    </div>
+                   
+                     <div class="mt-2  mb-3">
+                      <div class="form-group d-flex justify-content-between">
+
+                        <div id="upload_button" class=" align-self-center">
+                             <label for="">Logo: 
+                            <input type="file" name="logo" id="logo-img">
+                          </label>
+                          <p class="up-text mb-2">Format jpeg 20 x 20 px</p>
+                        </div>
+
+                        <div class="add-img">
+                          <img src="{{config.logo.url}}" alt="add-logo" id="preview"></div>
+                      </div>
+                    </div>
+                    <div class="mt-2  mb-3">
+                      <label for="">Maintenance Mode</label>
+                      <select name="maintaince_mode" id="maintaince_mode" class="form-control w-25">
+                        <option {% if config.maintaince_mode == False %} selected {% endif %} value="no" selected>No</option>
+                        <option value="yes" {% if config.maintaince_mode == True %} selected {% endif %}>Yes</option>          
+                      </select>
+                    </div>
+                  
+                <button type="submit" class="btn btn-primary mr-3">
+                   Save
+                </button>
+                </form>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+{% endblock %}
+
+
+{% block extrascript %}
+<script>
+  // CKEDITOR.replace( 'editor1' );
+  $('input[type="text"] , textarea , select').attr('required',true);
+  $('.delete').on('click', function() {
+    window.history.back();
+  });
+  function readURL(input) {
+    console.log("in fun",input.files);
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#preview').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#logo-img").on('change',function() {
+  var image = $(this);
+  console.log(image.height(),image.width())
+  if (image.height() >= 2000 || image.width() >= 2000){
+    alert('Invalid Image');
+    $(this).val("");
+  }
+  else{
+    readURL(this);
+  }
+  
+});
+</script>
+{% endblock %}

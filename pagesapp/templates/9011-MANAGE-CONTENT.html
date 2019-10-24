@@ -25,7 +25,7 @@
    <table id="example" class="table table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th><label class="payment_gateway_checkbox"><input  class="selectall"  type="checkbox">
+                <th><label class="payment_gateway_checkbox"><input onclick="selectAllBoxes(this);"  class="selectall"  type="checkbox">
                 <span class="checkmark"></span>
               </label></th>
                 <th>Page Title</th>
@@ -33,28 +33,29 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
+        <!-- <tbody> -->
+           <tbody id="manage_page_tbody">
 
           {% for page in pages %}
         
                <tr>
-                <td><label class="payment_gateway_checkbox"><input type="checkbox" name="checked_groups" value="{{page.id}}" >
+                <td><label class="payment_gateway_checkbox"><input type="checkbox" name="select_page" value="{{page.id}}" >
                 <span class="checkmark"></span>
               </label></td>
                 <td class="image_id" >{{page.title}}</td>
             
-                <td class="list_icon text-center"  ><a  href="{% url 'single_page_status' page.id %}"  data-id="{{page.id}}"><i  class="fa fa-{% if page.status == True %}unlock{% else %}lock{% endif %}" aria-hidden="true"></i></a></td>
+                <td class="list_icon text-center"><a href="javascript:void(0);"  data-id="{{page.id}}" class="page-status"><i  class="fa fa-{% if page.status == True %}unlock{% else %}lock{% endif %}" aria-hidden="true"></i></a></td>
                 
                 <td class="list_icon d-flex">
-                  <a href="/admin/{{page.url}}" target="_blank">
+                  <a href="/{{page.url}}" target="_blank">
                       <i class="fa fa-eye" aria-hidden="true"></i>
                     </a>
 
                     <a href="{% url 'edit_page' page.id %}">
                       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </a>
-                    
-                  <a href="{% url 'delete_page' page.id %}" class="delete-page" data-id="{{page.id}}">
+                    <a href="javascript:void(0);" class="delete-page" data-id="{{page.id}}">
+                 
                      <i class="fa fa-times" aria-hidden="true"></i>
                     </a>
                  </td>
