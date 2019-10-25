@@ -17,6 +17,8 @@ urlpatterns = [
     path('couponapp/',include('couponapp.urls')),
     path('pagesapp/',include('pagesapp.urls')),
     path('config',include('configuration.urls')),
+    path('profile',include('companyprofile.urls')),
+
     path('<page>',GetPages.as_view()),
 
     path('oauth/', include('social_django.urls', namespace='social')),

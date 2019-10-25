@@ -1,10 +1,10 @@
   {% load staticfiles %}
   <aside class="main-sidebar">
 
-    <!-- sidebar: style can be found in sidebar.less -->
+  
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
+     
       <div class="user-panel">
         <div class="pull-left image">
           <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="img-circle" alt="User Image">
@@ -16,33 +16,16 @@
         </div>
       </div>
 
-      <!-- search form (Optional) -->
-      <!-- <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form> -->
-      <!-- /.search form -->
-
-      <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Wellcome, Billy<br>
         <span>Your last login was:2019-10-01 at 8:43:54</span>
         </li>
-        <!-- Optionally, you can add icons to the links -->
+     
          <li class="">
           <a href="{% url 'admin-home' %}"><i class="fa fa-link"></i> <span>Home</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+           
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
          <li class="">
           <a href="{% url 'super_admin' %}"><i class="fa fa-link"></i> <span>Super Admin</span>
@@ -56,300 +39,162 @@
         </li>
         <li class="">
           <a href="{% url 'add_staff' %}"><i class="fa fa-link"></i> <span>Add Staff</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+        
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+        
         </li>
          <li class="">
           <a href="{% url 'users' %}"><i class="fa fa-link"></i> <span>Users</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+     
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+      
         </li>
          <li class="">
           <a href="{% url 'manage_page' %}"><i class="fa fa-link"></i> <span>Manage Content</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+          
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
          <li class="">
           <a href="{% url 'add_page' %}"><i class="fa fa-link"></i> <span>Add pages</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+          
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
 
-        
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+         
         </li>
 
         <li class="">
           <a href="{% url 'faq_category' %}"><i class="fa fa-link"></i> <span>FAQ Category</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+            
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+         
         </li>
         <li class="">
           <a href="{% url 'add_faq_category' %}"><i class="fa fa-link"></i> <span>Add Cat</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+        
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+      
         </li>
         <li class="">
           <a href="{% url 'faq' %}"><i class="fa fa-link"></i> <span>FAQ</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+           
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+     
         </li>
         <li class="">
           <a href="{% url 'add_faq' %}"><i class="fa fa-link"></i> <span>Add FAQ</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+            
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+      
         </li>
         <li class="">
           <a href="{% url 'price_and_fee' %}"><i class="fa fa-link"></i> <span>Price and Fee</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+          
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+        
         </li>
         <li class="">
           <a href="{% url 'manage_posting' %}"><i class="fa fa-link"></i> <span>Manage Posting</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+          
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
         <li class="">
           <a href="{% url 'sales_data_custom' %}"><i class="fa fa-link"></i> <span>Sales Data</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+          
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
         <li class="">
           <a href="{% url 'sales_order' %}"><i class="fa fa-link"></i> <span>Sales Order</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+           
           </a>
         <li class="">
           <a href="{% url 'order_history' %}"><i class="fa fa-link"></i> <span>Order History</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+            
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+         
         </li>
         <li class="">
           <a href="{% url 'product_list' %}"><i class="fa fa-link"></i> <span>Product</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+                  </a>
+         
         </li>
         <li class="">
           <a href="{% url 'add_product' %}"><i class="fa fa-link"></i> <span>Add Product</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+           
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+        
         </li>
          <li class="">
           <a href="{% url 'shipping_list' %}"><i class="fa fa-link"></i> <span>Shipping</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+            
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+         
         </li>
          <li class="">
           <a href="{% url 'add_shipping' %}"><i class="fa fa-link"></i> <span>Add Shipping</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+            
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
         <li class="">
           <a href="{% url 'admin_config' %}"><i class="fa fa-link"></i> <span>Configuration</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
+           
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       
         </li>
         <li class="">
           <a href="{% url 'company_profile' %}"><i class="fa fa-link"></i> <span>Company Profile</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
         </li>
         <li class="">
           <a href="{% url 'blog_category' %}"><i class="fa fa-link"></i> <span>Blog Category</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+        </a>
         </li>
         <li class="">
           <a href="{% url 'add_blog_category' %}"><i class="fa fa-link"></i> <span>Add Cat</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+       </a>
         </li>
         <li class="">
           <a href="{% url 'blog_list' %}"><i class="fa fa-link"></i> <span>Blog</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+            </a>
         </li>
         <li class="">
           <a href="{% url 'add_blog' %}"><i class="fa fa-link"></i> <span>Add Blog</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
         </li>
         <li class="">
           <a href="{% url 'paypal' %}"><i class="fa fa-link"></i> <span>Paypal</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+            </a>
+
         </li>
          <li class="">
           <a href="{% url 'types_of_use' %}"><i class="fa fa-link"></i> <span>Type of Use</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+           </a>
+
         </li>
          <li class="">
           <a href="{% url 'keywords' %}"><i class="fa fa-link"></i> <span>Key Words</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+
         </li>
          <li class="">
           <a href="{% url 'new_and_used_images' %}"><i class="fa fa-link"></i> <span>New Images</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+           </a>
         </li>
          <li class="">
           <a href="{% url 'add_new_images' %}"><i class="fa fa-link"></i> <span>Add Images</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+
         </li>
          <li class="">
-          <a href=""><i class="fa fa-link"></i> <span>Used Images</span>
-            <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
-          </a>
-         <!--  <ul class="treeview-menu">
-            <li><a href="#">Summary</a></li>
-          </ul> -->
+          <a href="#"><i class="fa fa-link"></i> <span>Used Images</span>
+         </a>
+         
         </li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Invitation Images</span>
@@ -358,7 +203,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="9094-ADD-NEW-IMAGES.html">Add Images</a></li>
+            <li><a href="#">Add Images</a></li>
           </ul>
         </li>
          <li class="treeview">

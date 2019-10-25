@@ -217,19 +217,6 @@ class Users(TemplateView):
 		return render(request,self.template_name,{})
 
 
-
-
-
-
-
-
-class CompanyProfile(TemplateView):
-	template_name = '9061-COMPANY-PROFILE.html'
-	def get(self, request, *args, **kwargs):
-		return render(request,self.template_name,{})
-
-
-
 class Paypal(TemplateView):
 	template_name = '9081-PAYPAL.html'
 	def get(self, request, *args, **kwargs):

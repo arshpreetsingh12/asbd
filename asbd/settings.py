@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'couponapp',
     'pagesapp',
     'configuration',
+    'companyprofile',
 ]
 
 MIDDLEWARE = [
