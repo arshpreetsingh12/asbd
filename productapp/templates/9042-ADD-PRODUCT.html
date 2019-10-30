@@ -5,56 +5,34 @@
   <div class="content-wrapper">
 
     <section class="content container-fluid">
+      
       <div class="manage_admin">
         <div class="add_min d-flex justify-content-between"> 
-    <h3>Add Producd</h3>
-    <button class="btn btn-success">Add</button>
+    <h3>Add Product</h3>
+    <a href="javascript:void(0)" class="add_field_button add-product" id="add_new_product"><button class="btn btn-success">Add</button></a>
     </div>
-        <table class="table">
-  <thead>
-    
-    <tr>
-     
-      <th scope="col">Product Name</th>
-      <th scope="col">Dimension (W / H)</th>
-      <th scope="col">Weight</th>
-      <th scope="col">Price</th>
-      <th scope="col">Process Time</th>
-      <th scope="col">Type of Backdrop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><input type="text" class="form-control" placeholder=""></td>
-      <td class="d-flex price_asbd"><span><input type="text" class="form-control" placeholder=""></span>
-        <span class="ml-2"><input type="text" class="form-control" placeholder=""></span>
-      </td>
-      <td class="price_asbd"><input type="text" class="form-control" placeholder=""></td>
-      <td class="price_asbd"><input type="text" class="form-control" placeholder=""></td>
-      <td class="price_asbd"><input type="text" class="form-control" placeholder=""></td>
-      <td class="d-flex align-items-center"><div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
-            <label class="form-check-label" for="exampleRadios1">
-              Regular
-            </label>
-          </div>
-        <div class="form-check ml-3">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
-            <label class="form-check-label" for="exampleRadios1">
-              Gree
-            </label>
-          </div>
-        </td>
-      
-    </tr>
-   
-  </tbody>
-</table>
-<button class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button>
+    <form action="{% url 'add_product' %}" method="post">
+        {% csrf_token %}
+ 
+ <!-- add table using js  -->
+<div id="add_div"></div>
+ 
+<input type="hidden" name="product_box" id="total_product_boxes" value="">
+
+<button type="submit" class="edit  btn btn-success"><sapn><i class="fa fa-check" aria-hidden="true"></i></sapn> Save</button>
 <button class="delete btn btn-orange"><span><i class="fa fa-ban" aria-hidden="true"></i></span> Cancel</button>
       </div>
+      </form>
     </section>
     <!-- /.content -->
   </div>
  
  {% endblock %}
+
+  {% block extrascript %}
+<script type="text/javascript">
+  $('.delete').on('click', function() {
+    window.history.back();
+  });
+</script>
+{% endblock %}

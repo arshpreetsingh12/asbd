@@ -25,7 +25,6 @@ class AddPage(TemplateView):
 		content = request.POST.get("page_content")
 		url = request.POST.get("page_url")
 		image = request.FILES.get('img')
-		print("image>>>>>>",image)
 		page_obj = Page(
 			title=title,
 			content=content,

@@ -82,6 +82,8 @@ $(document).click(function(){
     $(".other_pages_search").hide();
 });
 
+
+
 // ===================================
 
   // match password and email 
@@ -175,7 +177,7 @@ $(document).ready(function() {
 	});
 
 
-  // change all pages status
+  // change multiple pages status
 	  $(".all-page-status").click(function(){
 			var status=$(this).attr('data-id');
 			var selected_pages = [];
